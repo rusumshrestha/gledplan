@@ -1,0 +1,28 @@
+/// colors black & white
+/// @example scss - Usage
+///   .my-class {
+///     background: black(0.15);
+///     color: white(0.9);
+///   }
+@function black($opacity){
+  @return rgba(black, $opacity);
+}
+
+@function white($opacity){
+  @return rgba(white, $opacity);
+}
+
+/**
+return rem with respect to base
+**/
+@function getRelativeRem($fontSize){
+    @return ($fontSize/18)+rem;
+}
+
+@function convertToRem($fontSize, $baseSize:18){
+    @return (strip-units($fontSize)/$baseSize)+rem;
+}
+
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+ }

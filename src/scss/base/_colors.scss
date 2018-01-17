@@ -1,0 +1,16 @@
+//Colors
+.bg{
+	color:$white;
+	h4{
+		color:$white;
+		}
+	&--green{
+		background-color: rgb(155, 214, 113);
+		}
+	&--purple{
+		 background-color: rgb(154, 92, 178);
+		}	
+	&--grey{
+		background-color: rgb(114, 114, 114);
+		}	
+}

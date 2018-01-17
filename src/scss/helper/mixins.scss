@@ -1,0 +1,143 @@
+/// Adds a browser prefix to the property
+/// @param {*} $property Property
+/// @param {*} $value Value
+
+@mixin css3-prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -khtml-#{$property}: #{$value};
+  -moz-#{$property}: #{$value};
+  -ms-#{$property}: #{$value};
+  -o-#{$property}: #{$value};
+  #{$property}: #{$value};
+}
+
+/// Border Radius
+/// @param {Size} $radius [5px] - Radius
+/// @require {mixin} css3-prefix
+@mixin border-radius($radius: 4px) {
+ @include css3-prefix('border-radius', $radius);
+}
+
+
+//transitions
+
+@mixin transition($type: all, $transition: 0.2s, $effect: ease-in-out) {
+  @include css3-prefix('transition', $type $transition $effect);
+}
+
+
+/// Box Shadow
+/// @param {Size} $x [2px] - X
+/// @param {Size} $y [2px] - Y
+/// @param {Size} $blur [5px] - Blur
+/// @param {Color} $color [rgba(0,0,0,.4)] - Color
+/// @param {Boolean} $inset - Inset
+
+@mixin box-shadow($top: 2px, $left: 2px, $blur: 5px, $color: rgba(0,0,0,.4), $inset: "") {
+  @if ($inset != "") {
+    @include css3-prefix('box-shadow', $inset $top $left $blur $color);
+  } @else {
+    @include css3-prefix('box-shadow', $top $left $blur $color);
+  }
+}
+
+@mixin text-shadow($top, $left, $blur, $color, $inset:"") {
+      -webkit-text-shadow:$top $left $blur $color #{$inset};
+      -moz-text-shadow:$top $left $blur $color #{$inset};
+      text-shadow:$top $left $blur $color #{$inset};
+    }		
+	
+@mixin backface-visibility($hidden){	
+	-webkit-backface-visibility:$hidden;
+    -moz-backface-visibility:$hidden;
+    -ms-backface-visibility:$hidden;
+    -o-backface-visibility:$hidden;
+    backface-visibility:$hidden;
+} 
+
+	
+@mixin border-right-radius($radius){
+	-webkit-border-top-right-radius: $radius;
+	-webkit-border-bottom-right-radius: $radius;
+	-moz-border-radius-topright: $radius;
+	-moz-border-radius-bottomright: $radius;
+	border-top-right-radius: $radius;
+	border-bottom-right-radius: $radius;
+	-webkit-border-top-left-radius: 0;
+	-webkit-border-bottom-left-radius: 0;
+	-moz-border-radius-topleft: 0;
+	-moz-border-radius-bottomleft: 0;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	}
+		
+@mixin border-left-radius($radius){
+	-webkit-border-top-right-radius: 0;
+	-webkit-border-bottom-right-radius: 0;
+	-moz-border-radius-topright: 0;
+	-moz-border-radius-bottomright: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	-webkit-border-top-left-radius: $radius;
+	-webkit-border-bottom-left-radius: $radius;
+	-moz-border-radius-topleft: $radius;
+	-moz-border-radius-bottomleft: $radius;
+	border-top-left-radius: $radius;
+	border-bottom-left-radius: $radius;
+	}		
+	
+@mixin transition-timing($ease){
+  @include css3-prefix('transition-timing-function',$ease);
+}	
+	
+@mixin rotate($degree) {
+  @include css3-prefix('transform',rotate($degree));
+}
+
+@mixin transition_delay($start, $end) {
+  @include css3-prefix('transition-delay', $start,$end);
+}
+
+@mixin transition_duration($start, $end) {
+  @include css3-prefix(' transition-duration', $start,$end);
+}
+
+@mixin transition_property($value) {
+    transition-property: $value, transform;
+    -webkit-transition-property: $value, -webkit-transform;
+    -moz-transition-property: $value, -moz-transform;
+    -ms-transition-property: $value, -ms-transform;
+    -o-transition-property: $value, -o-transform;
+}
+
+
+/// Responsive
+@mixin breakpoint($point) {
+  @if $point == x-large {
+    @media (min-width: 1300px) { @content; }
+  }
+  @if $point == large {
+    @media (min-width: 1200px) { @content; }
+  }
+  @else if $point == medium {
+    @media (min-width: 992px) { @content; }
+  }
+  @else if $point == small {
+    @media (min-width: 768px)  { @content; }
+  }
+  @else if $point == x-small {
+    @media (min-width: 640px)  { @content; }
+  }
+   @else if $point == xx-small {
+    @media (min-width: 480px)  { @content; }
+  }
+}
+
+
+@mixin border($side, $style) {
+  @if $side == all {
+    border: $style;
+  } @else {
+    border-#{$side}: $style;
+  }
+}

@@ -1,0 +1,61 @@
+html {
+  box-sizing: border-box;
+  -webkit-text-size-adjust:100%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+*{
+  margin:0;
+  padding: 0;
+}
+
+// adaptive images
+img {
+  max-width: 100%;
+  height: auto;
+  outline:none;
+  border:none;
+}
+
+// google map fix
+.gm-style img {max-width: none}
+
+// hide tel links on desktop
+// @media only screen and (min-width:1025px) {
+//     a[href^=tel],a[href^=skype], a[href^=sms] {
+//     cursor:default;
+//     pointer-events:none;
+//   }
+// }
+
+a,
+a:hover, a:active, a:focus,
+object, embed,
+input::-moz-focus-inner{
+   outline: 0;
+}
+
+a {
+    text-decoration: none;
+    outline:none;
+    border:none;
+    &:hover, &:focus {
+        text-decoration: none;
+        outline: none;
+        outline-offset: 0;
+		// color:$theme-color;
+    }
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.more-link {
+    border-bottom:1px solid $theme-color;
+    display: inline-block;
+    font-family: "Crete Round",serif;
+    font-style: italic;
+    padding: 0 2px;
+	color:$theme-color;
+}

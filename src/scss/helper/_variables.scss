@@ -1,0 +1,60 @@
+// Variables
+//-------------------------------------------------------------
+
+
+
+$gutter : 20px;
+
+//color options
+$base-color : #656b6f;
+$dark-gray: #323233;
+
+$theme-color:#f79862;
+$theme-color-alt: #6eb43f;
+
+$gray:#3b3d40;
+$light-gray : #f3f3f3;
+$light-gray-1: #72757b;
+$light-gray-2:#888;
+
+$navColor : $dark-gray;
+$border-color-1:#34373c;
+$border-color-2:#4d4f53;
+
+$white: #fff;
+$black:#000;
+
+//font family
+$base-font:'PT Sans', sans-serif;
+$primary-font:'Montserrat', sans-serif;
+$secondary-font : 'PT Sans Caption', sans-serif;
+$icon-font: 'FontAwesome';
+
+
+//font size & line height
+
+$base-font-size: 16px;
+$body-line-height: 1.5;
+
+//font weight
+$light: 300;
+$regular: 400;
+$medium : 500;
+$bold: 700;
+
+//box model
+$margin: 20px;
+$padding: 20px;
+$paraMargin : 50px;
+$inputHeight: 38px;
+$textareaHeight: 250px;
+$headerHeight: 100px;
+$subMenuWidth: 360px;
+$thumbMarginBottom: 40px;
+$btnHeight:40px;
+
+
+
+.fontItalic {
+    font-style: italic;
+}

@@ -1,0 +1,178 @@
+.fontItalic {
+  font-style: italic;
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  outline: none;
+  border: none;
+}
+
+.gm-style img {
+  max-width: none;
+}
+
+a,
+a:hover, a:active, a:focus,
+object, embed,
+input::-moz-focus-inner {
+  outline: 0;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+  outline: none;
+  outline-offset: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.more-link {
+  border-bottom: 1px solid #f79862;
+  display: inline-block;
+  font-family: "Crete Round",serif;
+  font-style: italic;
+  padding: 0 2px;
+  color: #f79862;
+}
+
+/**
+ * Description: Container Sizes
+ * Version: 1.0.0
+ * Last update: 2018/01
+ * Author: Gledpan
+ *
+ * Summary:
+ *
+ *	1. CONTAINER SIZES
+ *		- 1.1. CONTAINER SMALL
+ *		- 1.2. CONTAINER MEDIUM
+ *		- 1.3. CONTAINER LARGE
+ *		- 1.4. ROW
+ *	2. TWO COL, THREE COL, FOUR COL
+ *		- 2.1. TWO COL
+ *		- 2.2. THREE COL
+ *		- 2.3. FOUR COL
+ */
+/* ==========================================================================
+   1. CONTAINER SIZES
+   ========================================================================== */
+.container-small,
+.container-medium,
+.container-large {
+  position: relative;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* 1.1. CONTAINER SMALL
+   	   ========================================================================== */
+@media (min-width: 992px) {
+  .container-small {
+    width: 830px;
+  }
+}
+
+/* 1.2. CONTAINER MEDIUM
+	   ========================================================================== */
+@media (min-width: 1200px) {
+  .container-medium {
+    width: 1040px;
+  }
+}
+
+/* 1.3. CONTAINER LARGE
+	   ========================================================================== */
+@media (min-width: 1300px) {
+  .container-large {
+    width: 1250px;
+  }
+}
+
+/* 1.4. ROW
+	   ========================================================================== */
+.row {
+  margin: 0 -15px;
+}
+
+/* ==========================================================================
+   TWO COL , THREE COL, FOUR COL
+   ========================================================================== */
+@media (min-width: 768px) {
+  .two-col, .three-col, .four-col {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: -30px;
+  }
+}
+
+.two-col .col, .three-col .col, .four-col .col {
+  margin-bottom: 30px;
+}
+
+.two-col .col:last-child, .three-col .col:last-child, .four-col .col:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .two-col .col, .three-col .col, .four-col .col {
+    margin-bottom: 0;
+  }
+}
+
+/* TWO COL
+   	   ========================================================================== */
+.two-col {
+  margin-left: -30px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+@media (min-width: 640px) {
+  .two-col .col {
+    width: calc(50% - 30px);
+    margin-left: 30px;
+  }
+}
+
+/* THREE COL
+   	   ========================================================================== */
+@media (min-width: 768px) {
+  .three-col .col {
+    width: calc(33.33% - 30px);
+    margin-left: 30px;
+  }
+}
+
+/* 
+   FOUR COL
+   ========================================================================== */
+@media (min-width: 768px) {
+  .four-col .col {
+    width: calc(25% - 30px);
+    margin-left: 30px;
+  }
+}

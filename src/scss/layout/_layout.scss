@@ -1,0 +1,112 @@
+/**
+ * Description: Container Sizes
+ * Version: 1.0.0
+ * Last update: 2018/01
+ * Author: Gledpan
+ *
+ * Summary:
+ *
+ *	1. CONTAINER SIZES
+ *		- 1.1. CONTAINER SMALL
+ *		- 1.2. CONTAINER MEDIUM
+ *		- 1.3. CONTAINER LARGE
+ *		- 1.4. ROW
+ *	2. TWO COL, THREE COL, FOUR COL
+ *		- 2.1. TWO COL
+ *		- 2.2. THREE COL
+ *		- 2.3. FOUR COL
+ */
+
+
+/* ==========================================================================
+   1. CONTAINER SIZES
+   ========================================================================== */
+   	.container-small,
+   	.container-medium,
+   	.container-large{
+		position: relative;
+		padding: 0 15px;
+		margin:0 auto;
+   	}
+   	/* 1.1. CONTAINER SMALL
+   	   ========================================================================== */
+	.container-small{
+		@include breakpoint(medium) {
+			width: 830px;
+		}
+	}
+	/* 1.2. CONTAINER MEDIUM
+	   ========================================================================== */
+	.container-medium{
+		@include breakpoint(large) {
+			width: 1040px;
+		}
+	}
+	/* 1.3. CONTAINER LARGE
+	   ========================================================================== */
+	.container-large{
+		@include breakpoint(x-large) {
+			width: 1250px;
+		}
+	}
+	/* 1.4. ROW
+	   ========================================================================== */
+	.row{
+		margin: 0 -15px;
+	}
+
+/* ==========================================================================
+   TWO COL , THREE COL, FOUR COL
+   ========================================================================== */
+   .two-col, .three-col, .four-col{
+   		@include breakpoint(small) {
+   			display: flex;
+   			flex-wrap:nowrap;
+   			margin-left: -30px;
+   		}
+   		.col{
+   			margin-bottom: 30px;
+   			&:last-child{
+   				margin-bottom: 0;
+   			}
+   			@include breakpoint(small) {
+   				margin-bottom: 0;
+   			}
+   		}
+   	}
+   	/* TWO COL
+   	   ========================================================================== */
+   .two-col{
+   		margin-left: -30px;
+   		display: flex;
+   		flex-wrap:nowrap;
+   		.col{
+   			@include breakpoint(x-small) {
+				width: calc(50% - 30px);
+				margin-left: 30px;
+   			}
+   		}
+   }
+   	/* THREE COL
+   	   ========================================================================== */
+   .three-col{
+   		.col{
+   			@include breakpoint(small) {
+				width: calc(33.33% - 30px);
+				margin-left: 30px;
+   			}
+   		}
+   }
+   /* 
+   FOUR COL
+   ========================================================================== */
+   .four-col{	
+   		.col{
+   			@include breakpoint(small) {
+				width: calc(25% - 30px);
+				margin-left: 30px;
+   			}
+   		}
+   }
+
+
