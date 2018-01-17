@@ -4,7 +4,7 @@
 		position: relative;
 	}
 
-.menuToggle {
+.menu-toggle {
 	width: 35px;
 	height: 30px;
 	cursor: pointer;
@@ -73,7 +73,7 @@
 
 }
 
-.mainMenu {
+.main-menu {
 	clear: both;
 	width: 100%;
 	@include breakpointMax(medium) {

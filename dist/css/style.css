@@ -182,7 +182,7 @@ header {
   position: relative;
 }
 
-.menuToggle {
+.menu-toggle {
   width: 35px;
   height: 30px;
   cursor: pointer;
@@ -200,12 +200,12 @@ header {
 }
 
 @media (min-width: 992px) {
-  .menuToggle {
+  .menu-toggle {
     display: none;
   }
 }
 
-.menuToggle > span {
+.menu-toggle > span {
   width: 35px;
   height: 6px;
   background-color: #676767;
@@ -218,15 +218,15 @@ header {
   -o-transition: all 0.3s ease 0s;
 }
 
-.menuToggle > span:last-child {
+.menu-toggle > span:last-child {
   margin-bottom: 0px;
 }
 
-.menuToggle.active > span {
+.menu-toggle.active > span {
   background: #09426A;
 }
 
-.menuToggle.active > span:first-child {
+.menu-toggle.active > span:first-child {
   transform: rotate(50deg);
   -webkit-transform: rotate(50deg);
   -moz-transform: rotate(50deg);
@@ -236,11 +236,11 @@ header {
   top: 8px;
 }
 
-.menuToggle.active > span:nth-child(2) {
+.menu-toggle.active > span:nth-child(2) {
   opacity: 0;
 }
 
-.menuToggle.active > span:last-child {
+.menu-toggle.active > span:last-child {
   transform: rotate(-50deg);
   -webkit-transform: rotate(-50deg);
   -moz-transform: rotate(-50deg);
@@ -250,13 +250,13 @@ header {
   top: -16px;
 }
 
-.mainMenu {
+.main-menu {
   clear: both;
   width: 100%;
 }
 
 @media (max-width: 991px) {
-  .mainMenu {
+  .main-menu {
     position: absolute;
     top: 50px;
     left: 0;
@@ -268,19 +268,19 @@ header {
   }
 }
 
-.mainMenu ul {
+.main-menu ul {
   margin: 0;
   padding: 0;
   float: left;
 }
 
 @media (max-width: 991px) {
-  .mainMenu ul {
+  .main-menu ul {
     width: 100%;
   }
 }
 
-.mainMenu ul a {
+.main-menu ul a {
   color: #676767;
   text-decoration: none;
   display: block;
@@ -289,24 +289,24 @@ header {
 }
 
 @media (max-width: 767px) {
-  .mainMenu ul a {
+  .main-menu ul a {
     font-size: 14px;
     line-height: 20px;
   }
 }
 
-.mainMenu ul li {
+.main-menu ul li {
   list-style: none;
 }
 
-.mainMenu ul > li {
+.main-menu ul > li {
   float: left;
   padding: 0 37.5px;
   position: relative;
 }
 
 @media (max-width: 991px) {
-  .mainMenu ul > li {
+  .main-menu ul > li {
     display: block;
     width: 100%;
     padding: 0 70px 0 0;
@@ -314,44 +314,44 @@ header {
 }
 
 @media (max-width: 1200px) {
-  .mainMenu ul > li {
+  .main-menu ul > li {
     padding: 0 15px;
   }
 }
 
 @media (max-width: 1300px) {
-  .mainMenu ul > li {
+  .main-menu ul > li {
     padding: 0 25px;
   }
 }
 
-.mainMenu ul > li:last-child {
+.main-menu ul > li:last-child {
   padding-right: 0;
 }
 
-.mainMenu ul > li > a {
+.main-menu ul > li > a {
   padding: 10px 0 12px;
 }
 
 @media (max-width: 991px) {
-  .mainMenu ul > li > a {
+  .main-menu ul > li > a {
     padding: 10px 0 12px 0px;
   }
 }
 
-.mainMenu ul > li:hover a {
+.main-menu ul > li:hover a {
   color: #054068;
 }
 
-.mainMenu ul > li:hover ul.sub-menu {
+.main-menu ul > li:hover ul.sub-menu {
   display: block;
 }
 
-.mainMenu ul > li.active a {
+.main-menu ul > li.active a {
   color: #054068;
 }
 
-.mainMenu ul > li ul.sub-menu {
+.main-menu ul > li ul.sub-menu {
   position: absolute;
   top: 100%;
   left: 15px;
@@ -363,33 +363,33 @@ header {
 }
 
 @media (max-width: 991px) {
-  .mainMenu ul > li ul.sub-menu {
+  .main-menu ul > li ul.sub-menu {
     position: static;
     width: 100%;
     background: transparent;
   }
 }
 
-.mainMenu ul > li ul.sub-menu li {
+.main-menu ul > li ul.sub-menu li {
   display: block;
   width: 100%;
 }
 
-.mainMenu ul > li ul.sub-menu li > a {
+.main-menu ul > li ul.sub-menu li > a {
   line-height: 1.5;
 }
 
-.mainMenu ul > li ul.sub-menu li a {
+.main-menu ul > li ul.sub-menu li a {
   color: #fff;
   padding: 10px 0;
 }
 
 @media (max-width: 991px) {
-  .mainMenu ul > li ul.sub-menu li a {
+  .main-menu ul > li ul.sub-menu li a {
     color: #054068;
   }
 }
 
-.mainMenu ul > li ul.sub-menu:hover {
+.main-menu ul > li ul.sub-menu:hover {
   display: block;
 }

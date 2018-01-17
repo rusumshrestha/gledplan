@@ -9,10 +9,10 @@
 	<body>
 		<header>
 
-				<div class="menuToggle">
+				<div class="menuu-toggle">
 					<span></span><span></span><span></span>
 				</div>
-			<div class="mainMenu">
+			<div class="main-menu">
 				<ul id="menu-main-menu" class="menu">
 					<li>
 						<a href="#">Home</a>
@@ -58,13 +58,13 @@
 			<script type='text/javascript' src='dist/js/nav.js'></script>
 			<script>
 				function reset_menu() {
-					jQuery('.menuToggle').removeClass('active');
-					jQuery('.mainMenu').css({'display':'none'});
+					jQuery('.menuu-toggle').removeClass('active');
+					jQuery('.main-menu').css({'display':'none'});
 				}
 				jQuery(document).ready(function($) {
-					$('.menuToggle').bind('click', function() {
+					$('.menu-toggle').bind('click', function() {
 						$(this).toggleClass('active');
-						$('.mainMenu').slideToggle();
+						$('.main-menu').slideToggle();
 					});
 				});
 			</script>
