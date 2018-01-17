@@ -176,3 +176,220 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: 30px;
   }
 }
+
+/*Header*/
+header {
+  position: relative;
+}
+
+.menuToggle {
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+  background-color: #FFF;
+  position: absolute;
+  right: 20px;
+  top: 0;
+  transform: translateY(0%);
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  float: right;
+  display: block;
+}
+
+@media (min-width: 992px) {
+  .menuToggle {
+    display: none;
+  }
+}
+
+.menuToggle > span {
+  width: 35px;
+  height: 6px;
+  background-color: #676767;
+  margin-bottom: 6px;
+  display: block;
+  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+}
+
+.menuToggle > span:last-child {
+  margin-bottom: 0px;
+}
+
+.menuToggle.active > span {
+  background: #09426A;
+}
+
+.menuToggle.active > span:first-child {
+  transform: rotate(50deg);
+  -webkit-transform: rotate(50deg);
+  -moz-transform: rotate(50deg);
+  -ms-transform: rotate(50deg);
+  -o-transform: rotate(50deg);
+  position: relative;
+  top: 8px;
+}
+
+.menuToggle.active > span:nth-child(2) {
+  opacity: 0;
+}
+
+.menuToggle.active > span:last-child {
+  transform: rotate(-50deg);
+  -webkit-transform: rotate(-50deg);
+  -moz-transform: rotate(-50deg);
+  -ms-transform: rotate(-50deg);
+  -o-transform: rotate(-50deg);
+  position: relative;
+  top: -16px;
+}
+
+.mainMenu {
+  clear: both;
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .mainMenu {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+    z-index: 2;
+    background: #fff;
+    display: none;
+  }
+}
+
+.mainMenu ul {
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+
+@media (max-width: 991px) {
+  .mainMenu ul {
+    width: 100%;
+  }
+}
+
+.mainMenu ul a {
+  color: #676767;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+@media (max-width: 767px) {
+  .mainMenu ul a {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.mainMenu ul li {
+  list-style: none;
+}
+
+.mainMenu ul > li {
+  float: left;
+  padding: 0 37.5px;
+  position: relative;
+}
+
+@media (max-width: 991px) {
+  .mainMenu ul > li {
+    display: block;
+    width: 100%;
+    padding: 0 70px 0 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .mainMenu ul > li {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .mainMenu ul > li {
+    padding: 0 25px;
+  }
+}
+
+.mainMenu ul > li:last-child {
+  padding-right: 0;
+}
+
+.mainMenu ul > li > a {
+  padding: 10px 0 12px;
+}
+
+@media (max-width: 991px) {
+  .mainMenu ul > li > a {
+    padding: 10px 0 12px 0px;
+  }
+}
+
+.mainMenu ul > li:hover a {
+  color: #054068;
+}
+
+.mainMenu ul > li:hover ul.sub-menu {
+  display: block;
+}
+
+.mainMenu ul > li.active a {
+  color: #054068;
+}
+
+.mainMenu ul > li ul.sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 15px;
+  background: #054068;
+  width: 240px;
+  z-index: 2;
+  display: none;
+  padding: 0px 20px;
+}
+
+@media (max-width: 991px) {
+  .mainMenu ul > li ul.sub-menu {
+    position: static;
+    width: 100%;
+    background: transparent;
+  }
+}
+
+.mainMenu ul > li ul.sub-menu li {
+  display: block;
+  width: 100%;
+}
+
+.mainMenu ul > li ul.sub-menu li > a {
+  line-height: 1.5;
+}
+
+.mainMenu ul > li ul.sub-menu li a {
+  color: #fff;
+  padding: 10px 0;
+}
+
+@media (max-width: 991px) {
+  .mainMenu ul > li ul.sub-menu li a {
+    color: #054068;
+  }
+}
+
+.mainMenu ul > li ul.sub-menu:hover {
+  display: block;
+}

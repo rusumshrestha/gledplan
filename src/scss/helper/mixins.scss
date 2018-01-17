@@ -132,7 +132,26 @@
     @media (min-width: 480px)  { @content; }
   }
 }
-
+@mixin breakpointMax($point) {
+  @if $point == x-large {
+    @media (max-width: 1300px) { @content; }
+  }
+  @if $point == large {
+    @media (max-width: 1200px) { @content; }
+  }
+  @else if $point == medium {
+    @media (max-width: 991px) { @content; }
+  }
+  @else if $point == small {
+    @media (max-width: 767px)  { @content; }
+  }
+  @else if $point == x-small {
+    @media (max-width: 639px)  { @content; }
+  }
+   @else if $point == xx-small {
+    @media (max-width: 480px)  { @content; }
+  }
+}
 
 @mixin border($side, $style) {
   @if $side == all {
