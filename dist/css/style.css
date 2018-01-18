@@ -38,8 +38,18 @@ img {
 a,
 a:hover, a:active, a:focus,
 object, embed,
-input::-moz-focus-inner {
+input::-moz-focus-inner, button {
   outline: 0;
+}
+
+input[type="reset"], input[type="submit"], input[type="button"], button {
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 a {
@@ -265,6 +275,11 @@ a:hover {
 
 .text-center {
   text-align: center;
+}
+
+.title-block h2 {
+  line-height: 1;
+  margin-bottom: 20px;
 }
 
 .btn {
@@ -715,6 +730,60 @@ header {
   font: 800 45px/54px "Open Sans", sans-serif;
   color: #FFF;
   max-width: 525px;
+}
+
+.intro-form {
+  margin-bottom: 40px;
+}
+
+.intro-form .global-form {
+  background: #F1C142;
+  margin-top: -94px;
+  position: relative;
+  z-index: 1;
+  padding: 91px 70px 75px;
+}
+
+.intro-form .btn-blue {
+  color: #FFF;
+  font-weight: 400;
+}
+
+.intro-form .btn-blue:hover {
+  color: #57656C;
+  background: #FFF;
+}
+
+.intro-form ul li {
+  float: left;
+}
+
+.steps-intro {
+  background: #80A8CC;
+}
+
+.steps-intro ul {
+  text-align: center;
+}
+
+.steps-intro ul li {
+  display: inline-block;
+  color: #FFF;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 37px;
+  width: 33.33%;
+}
+
+.img-content .img-block {
+  float: left;
+  width: 150px;
+  margin-left: 20px;
+}
+
+.img-content .content {
+  float: right;
+  width: 821px;
 }
 
 /*

@@ -1,0 +1,42 @@
+.intro-form {
+	margin-bottom: 40px;
+	.global-form {
+		background: $theme-color;
+		margin-top: -94px;
+		position: relative;
+		z-index: 1;
+		padding: 91px 70px 75px;
+	}
+
+	.btn-blue {
+		color: $white;
+		font-weight: $regular;
+
+		&:hover {
+			color: $grey-dark;
+			background: $white;
+		}
+
+	}
+
+	ul {
+		li {
+			float: left;
+		}
+
+	}
+}
+.steps-intro{
+	background: $primary-color;
+	ul{
+		text-align: center;
+		li{
+			display: inline-block;
+			color: $white;
+			font-weight: $bold;
+			font-size: 14px;
+			line-height: 37px;
+			width: 33.33%;
+		}
+	}
+}

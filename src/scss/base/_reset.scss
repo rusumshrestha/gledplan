@@ -28,10 +28,14 @@ img {
 a,
 a:hover, a:active, a:focus,
 object, embed,
-input::-moz-focus-inner{
+input::-moz-focus-inner, button{
    outline: 0;
 }
-
+input[type="reset"], input[type="submit"], input[type="button"], button{
+  border: none;
+  cursor:pointer;
+  @include transition_hover();
+}
 a {
     text-decoration: none;
     outline:none;
@@ -213,4 +217,10 @@ a{
 }
 .text-center{
   text-align: center;
+}
+.title-block{
+  h2{
+    line-height: 1;
+    margin-bottom: 20px;
+  }
 }
