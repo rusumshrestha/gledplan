@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="91px" viewBox="0 0 70 91" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Calculator</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Startpagina-De-Hypotheekshop-(www.geldplan.nl/hypotheekshop)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="startpagina_De-Hypotheekshop" transform="translate(-333.000000, -1482.000000)" fill-rule="nonzero">
+            <g id="stappen" transform="translate(259.000000, 1296.000000)">
+                <g id="Calculator" transform="translate(74.000000, 186.000000)">
+                    <path d="M0,0 L0,73.7837838 C-1.68033755e-15,83.1875511 7.62325967,90.8108108 17.027027,90.8108108 L52.972973,90.8108108 C62.3767403,90.8108108 70,83.1875511 70,73.7837838 L70,0 L0,0 Z M66.2162162,3.78378378 L66.2162162,18.9189189 L3.78378378,18.9189189 L3.78378378,3.78378378 L66.2162162,3.78378378 Z M52.972973,87.027027 L17.027027,87.027027 C9.71298575,87.027027 3.78378378,81.0978251 3.78378378,73.7837838 L3.78378378,22.7027027 L66.2162162,22.7027027 L66.2162162,73.7837838 C66.2162162,81.0978251 60.2870143,87.027027 52.972973,87.027027 Z" id="Shape" fill="#56656C"></path>
+                    <circle id="Oval" fill="#74AFBE" cx="17.972973" cy="36.8918919" r="4.72972973"></circle>
+                    <circle id="Oval" fill="#74AFBE" cx="35" cy="36.8918919" r="4.72972973"></circle>
+                    <circle id="Oval" fill="#74AFBE" cx="52.027027" cy="36.8918919" r="4.72972973"></circle>
+                    <circle id="Oval" fill="#74AFBE" cx="17.972973" cy="53.9189189" r="4.72972973"></circle>
+                    <circle id="Oval" fill="#74AFBE" cx="35" cy="53.9189189" r="4.72972973"></circle>
+                    <circle id="Oval" fill="#74AFBE" cx="52.027027" cy="53.9189189" r="4.72972973"></circle>
+                    <circle id="Oval" fill="#74AFBE" cx="17.972973" cy="70.9459459" r="4.72972973"></circle>
+                    <circle id="Oval" fill="#74AFBE" cx="35" cy="70.9459459" r="4.72972973"></circle>
+                    <circle id="Oval" fill="#74AFBE" cx="52.027027" cy="70.9459459" r="4.72972973"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
