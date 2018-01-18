@@ -1,0 +1,26 @@
+header{
+	padding:14px 0 5px;
+}
+.logo{
+	float: left;
+	padding: 0 0 0 15px;
+	a{
+		display: block;
+	}
+}
+.side-nav{
+	float: right;
+	margin-top: 55px;
+	.info-bar{
+		ul{
+			li{
+				float: left;
+				font:$light 14px $text;
+				color:$grey-dark;
+				a{
+					font:$bold 16px $text;
+				}
+			}
+		}
+	}
+}

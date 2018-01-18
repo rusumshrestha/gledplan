@@ -74,8 +74,9 @@
 }
 
 .main-menu {
-	clear: both;
-	width: 100%;
+	float: left;
+	margin-left: 39px;
+	margin-top: 49px;
 	@include breakpointMax(medium) {
 		position: absolute;
 		top: 50px;
@@ -83,7 +84,6 @@
 		width: 100%;
 		padding: 0 20px;
 		z-index: 2;
-		background: #fff;
 		display: none;
 	}
 	ul {
@@ -95,15 +95,12 @@
 		}
 
 		a {
-			color: #676767;
+			color: $grey-dark;
 			text-decoration: none;
 			display: block;
-			font-size: 16px;
-			line-height: 30px;
-			@include breakpointMax(small) {
-				font-size: 14px;
-				line-height: 20px;
-			}
+			font-size: 15px;
+			line-height: 1;
+			text-transform: uppercase;
 		}
 
 		li {
@@ -112,8 +109,9 @@
 
 		>li {
 			float: left;
-			padding: 0 37.5px;
+			padding: 0;
 			position: relative;
+			margin-right: 48px;
 
 			@include breakpointMax(medium) {
 				display: block;

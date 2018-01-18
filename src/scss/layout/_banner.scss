@@ -1,0 +1,17 @@
+.banner{
+	height: 350px;
+	.container-large, .owl-carousel, .owl-stage-outer, .owl-stage, .owl-item, .item{
+		height: 100%;
+	}
+	.item{
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: left top;
+		padding:102px 0  0 17%;
+		p{
+			font:$ebold 45px/54px $text;
+			color:$white;
+			max-width: 525px;
+		}
+	}
+}

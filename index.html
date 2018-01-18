@@ -41,7 +41,7 @@
 				</div>
 				<!-- END LOGO -->
 				<!-- START NAV MENU -->
-				<div class="menuu-toggle">
+				<div class="menu-toggle">
 					<span></span><span></span><span></span>
 				</div>
 				<div class="main-menu">
@@ -87,8 +87,8 @@
 				<div class="side-nav">
 					<div class="info-bar">
 						<ul>
-							<li>Vandaag tot 17:00</li>
-							<li><i class="icon-phone"></i>020&nbsp;-&nbsp;1234567</li>
+							<li>Ma t/m vr van 08:30 - 18:00 uur</li>
+							<li><a href="tel:0203125339"><i class="icon-phone"></i>020-312 53 39</a></li>
 						</ul>
 					</div>
 				</div>
@@ -98,10 +98,12 @@
 		<!-- END HEADER -->
 		<!-- START BANNER -->
 		<div class="banner">
-			<div class="container container-large">
-				<ul>
-					<li style="background-image: url('dist/images/slider/slider-img-1.png');">Een lening sluit ik vanaf nu zelf online af</li>
-				</ul>
+			<div class="container-large">
+				<div class="owl-carousel">
+    				<div class="item" style="background-image: url('dist/images/slider/slider-img-1.png');">
+    					<p>Een lening sluit ik vanaf nu zelf online af</p>
+    				</div>
+    			</div>
 			</div>
 		</div>
 		<!-- END BANNER -->
@@ -367,6 +369,7 @@
 		<!-- END FOOTER -->
 		<script type='text/javascript' src='dist/js/jquery.js'></script>
 		<script type='text/javascript' src='dist/js/nav.js'></script>
+		<script type='text/javascript' src='dist/js/owl.carousel.min.js'></script>
 		<script>
 			function reset_menu() {
 				jQuery('.menuu-toggle').removeClass('active');
@@ -377,6 +380,23 @@
 					$(this).toggleClass('active');
 					$('.main-menu').slideToggle();
 				});
+
+				$('.owl-carousel').owlCarousel({
+				    loop:true,
+				    margin:0,
+				    nav:true,
+				    responsive:{
+				        0:{
+				            items:1
+				        },
+				        600:{
+				            items:1
+				        },
+				        1000:{
+				            items:1
+				        }
+				    }
+				})
 			});
 		</script>
 		<script>
