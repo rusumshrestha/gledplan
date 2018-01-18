@@ -2,13 +2,26 @@
   font-style: italic;
 }
 
+/**
+return rem with respect to base
+**/
 html {
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
 }
 
-*, *:before, *:after {
+* {
   box-sizing: inherit;
+}
+
+*:before, *::after {
+  box-sizing: inherit;
+}
+
+*:after {
+  clear: both;
+  display: block;
+  content: "";
 }
 
 * {
@@ -18,13 +31,6 @@ html {
 
 img {
   max-width: 100%;
-  height: auto;
-  outline: none;
-  border: none;
-}
-
-.gm-style img {
-  max-width: none;
 }
 
 a,
@@ -46,17 +52,134 @@ a:hover, a:focus {
   outline-offset: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
+ul, li {
+  list-style: none;
 }
 
-.more-link {
-  border-bottom: 1px solid #f79862;
-  display: inline-block;
-  font-family: "Crete Round",serif;
-  font-style: italic;
-  padding: 0 2px;
-  color: #f79862;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font: 400 16px/30px "Open Sans", sans-serif;
+  color: #000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  color: #000;
+  line-height: 54px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 30px;
+}
+
+h5 {
+  font-size: 26px;
+}
+
+h6 {
+  font-size: 24px;
+}
+
+p {
+  font: 400 16px/30px "Open Sans", sans-serif;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  font: 400 15px "Open Sans", sans-serif;
+  color: #000;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+a:hover {
+  color: #F1C142;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
 }
 
 /**

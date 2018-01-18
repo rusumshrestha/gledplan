@@ -1,16 +1,10 @@
-//Colors
-.bg{
-	color:$white;
-	h4{
-		color:$white;
-		}
-	&--green{
-		background-color: rgb(155, 214, 113);
-		}
-	&--purple{
-		 background-color: rgb(154, 92, 178);
-		}	
-	&--grey{
-		background-color: rgb(114, 114, 114);
-		}	
-}
+$theme-color:#F1C142;
+$primary-color:#80A8CC;
+$grey-dark:#57656C;
+$grey:#ECEFF1;
+$white:#FFF;
+$black:#000;
+$magenta:#6CB1BE;
+$green:#7ED321;
+$green-step:#89C943;
+$red:#D0021B;

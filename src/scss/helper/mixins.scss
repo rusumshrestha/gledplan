@@ -109,6 +109,13 @@
     -ms-transition-property: $value, -ms-transform;
     -o-transition-property: $value, -o-transform;
 }
+@mixin transition_hover($property:all, $time:.3s, $function:linear){
+  -webkit-transition: $property $time $function;
+  -moz-transition: $property $time $function;
+  -ms-transition: $property $time $function;
+  -o-transition: $property $time $function;
+  transition: $property $time $function;
+}
 
 
 /// Responsive
