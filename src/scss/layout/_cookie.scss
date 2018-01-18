@@ -1,0 +1,20 @@
+.cookie-block{
+	background: $grey;
+	padding: 37px 0 29px;
+	p{
+		line-height: 22px;
+		margin-bottom: 22px;
+		a{
+			font-weight: $bold;
+			text-decoration: underline;
+			&:hover{
+				color:$primary-color;
+			}
+		}
+	}
+	.btn{
+		font-weight: normal;
+		margin-top: 44px;
+		color:$white;
+	}
+}

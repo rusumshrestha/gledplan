@@ -160,10 +160,10 @@
   }
 }
 
-@mixin border($side, $style) {
+@mixin border($side, $width, $style, $color) {
   @if $side == all {
-    border: $style;
+    border: $width $style $color;
   } @else {
-    border-#{$side}: $style;
+    border-#{$side}: $width $style $color;
   }
 }
