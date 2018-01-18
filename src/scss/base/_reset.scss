@@ -141,6 +141,70 @@ a{
   }
 }
 
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body{
+  font: $regular 16px/30px $text;
+  color:$black;
+}
+h1,h2,h3,h4,h5,h6{
+  font-weight: $semi;
+  font-family: $text;
+  color:$black;
+  line-height: 54px;
+}
+h1{
+  font-size: 40px;
+}
+h2{
+  font-size: 35px;
+}
+h3{
+  font-size: 32px;
+}
+h4{
+  font-size: 30px;
+}
+h5{
+  font-size: 26px;
+}
+h6{
+  font-size: 24px;
+}
+p{
+  font: $regular 16px/30px $text;
+  color:$black;
+  margin-bottom: 30px;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+a{
+  font:$regular 15px $text;
+  color:$black;
+  @include transition_hover;
+  &:hover{
+    color:$theme-color;
+  }
+}
+
 .text-left{
   text-align: left;
 }
