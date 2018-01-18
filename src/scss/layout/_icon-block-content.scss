@@ -1,0 +1,26 @@
+.icon-block-content{
+	margin-bottom: 82px;
+	.icon-block{
+		position: relative;
+		width: 200px;
+		height: 200px;
+		@include border-radius(50%);
+		background: $grey;
+		margin:0 auto 20px;
+		svg{
+			margin: 53px 0;
+		}
+		span{
+			position: absolute;
+			top:-52px;
+			left: 22px;
+			font:$ebold 95px $text;
+			color:$theme-color;
+		}
+	}
+	.content{
+		p{
+			font: $regular 20px/30px $text;
+		}
+	}
+}

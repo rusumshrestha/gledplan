@@ -166,12 +166,12 @@ table {
 
 body{
   font: $regular 16px/30px $text;
-  color:$black;
+  color:$grey-dark;
 }
 h1,h2,h3,h4,h5,h6{
   font-weight: $semi;
   font-family: $text;
-  color:$black;
+  color:$grey-dark;
   line-height: 54px;
 }
 h1{
@@ -194,7 +194,7 @@ h6{
 }
 p{
   font: $regular 16px/30px $text;
-  color:$black;
+  color:$grey-dark;
   margin-bottom: 30px;
   &:last-child{
     margin-bottom: 0;
@@ -202,7 +202,7 @@ p{
 }
 a{
   font:$regular 15px $text;
-  color:$black;
+  color:$grey-dark;
   @include transition_hover;
   &:hover{
     color:$theme-color;

@@ -1,0 +1,36 @@
+.table-block {
+	margin-top: 58px;
+
+	.global-table {
+		table {
+			display: block;
+			width: 100%;
+			overflow-x: auto;
+
+			th {
+				background: $primary-color;
+				color: $white;
+				font: $semi 16px/20px $text;
+				text-align: left;
+				padding: 22px 10px;
+			}
+
+			td {
+				@include border(bottom, 1px, solid, $grey-dark);
+				padding: 9px 10px;
+			}
+
+		}
+
+	}
+
+}
+
+.note-block{
+	margin-top: 30px;
+	p{
+		font-size: 14px;
+		line-height: 20px;
+		margin-bottom: 22px;
+	}
+}

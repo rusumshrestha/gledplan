@@ -207,13 +207,13 @@ table {
 
 body {
   font: 400 16px/30px "Open Sans", sans-serif;
-  color: #000;
+  color: #57656C;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   font-family: "Open Sans", sans-serif;
-  color: #000;
+  color: #57656C;
   line-height: 54px;
 }
 
@@ -243,7 +243,7 @@ h6 {
 
 p {
   font: 400 16px/30px "Open Sans", sans-serif;
-  color: #000;
+  color: #57656C;
   margin-bottom: 30px;
 }
 
@@ -253,7 +253,7 @@ p:last-child {
 
 a {
   font: 400 15px "Open Sans", sans-serif;
-  color: #000;
+  color: #57656C;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   -ms-transition: all 0.3s linear;
@@ -311,7 +311,7 @@ a:hover {
 
 .btn.btn-primary:hover {
   background: #80A8CC;
-  columns: #FFF;
+  color: #FFF;
 }
 
 .btn.btn-border {
@@ -775,6 +775,10 @@ header {
   width: 33.33%;
 }
 
+.img-content {
+  margin-bottom: 173px;
+}
+
 .img-content .img-block {
   float: left;
   width: 150px;
@@ -784,6 +788,86 @@ header {
 .img-content .content {
   float: right;
   width: 821px;
+}
+
+.icon-block-content {
+  margin-bottom: 82px;
+}
+
+.icon-block-content .icon-block {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  -webkit-border-radius: 50%;
+  -khtml-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background: #ECEFF1;
+  margin: 0 auto 20px;
+}
+
+.icon-block-content .icon-block svg {
+  margin: 53px 0;
+}
+
+.icon-block-content .icon-block span {
+  position: absolute;
+  top: -52px;
+  left: 22px;
+  font: 800 95px "Open Sans", sans-serif;
+  color: #F1C142;
+}
+
+.icon-block-content .content p {
+  font: 400 20px/30px "Open Sans", sans-serif;
+}
+
+.full-width-content {
+  margin-bottom: 43px;
+}
+
+.full-width-content .btn {
+  margin-top: 28px;
+  margin-left: 148px;
+}
+
+.table-block {
+  margin-top: 58px;
+}
+
+.table-block .global-table table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table-block .global-table table th {
+  background: #80A8CC;
+  color: #FFF;
+  font: 600 16px/20px "Open Sans", sans-serif;
+  text-align: left;
+  padding: 22px 10px;
+}
+
+.table-block .global-table table td {
+  border-bottom: 1px solid #57656C;
+  padding: 9px 10px;
+}
+
+.note-block {
+  margin-top: 30px;
+}
+
+.note-block p {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 22px;
+}
+
+.background-block {
+  background: #ECEFF1;
 }
 
 /*
