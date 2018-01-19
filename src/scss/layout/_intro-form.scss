@@ -29,14 +29,21 @@
 .steps-intro{
 	background: $primary-color;
 	ul{
-		text-align: center;
+		@include breakpoint(small) {
+			text-align: center;
+		}
 		li{
-			display: inline-block;
 			color: $white;
 			font-weight: $bold;
 			font-size: 14px;
 			line-height: 37px;
-			width: 33.33%;
+			display: block;
+			float:none;
+			padding: 0 15px;
+			@include breakpoint(small) {
+				display: inline-block;
+				width: 33.33%;
+			}
 		}
 	}
 }

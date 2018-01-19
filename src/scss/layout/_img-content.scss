@@ -1,12 +1,18 @@
 .img-content{
 	margin-bottom: 173px;
 	.img-block{
-		float: left;
+		text-align: center;
 		width: 150px;
-		margin-left: 20px;
+		margin:0 auto;
+		@include breakpoint(small) {
+			float: left;
+			margin-left: 20px;
+		}
 	}
 	.content{
-		float: right;
-		width: 821px;
+		max-width: 821px;
+		@include breakpoint(small) {
+			float: right;
+		}
 	}
 }

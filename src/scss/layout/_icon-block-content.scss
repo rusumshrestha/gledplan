@@ -1,26 +1,56 @@
 .icon-block-content{
 	margin-bottom: 82px;
+	.col{
+		@include breakpoint(small) {
+			margin-bottom: 30px;
+		}
+	}
 	.icon-block{
 		position: relative;
-		width: 200px;
-		height: 200px;
 		@include border-radius(50%);
 		background: $grey;
-		margin:0 auto 20px;
+		float: left;
+		width: 140px;
+		height: 140px;
+		@include breakpoint(small) {
+			width: 200px;
+			height: 200px;
+			margin:0 auto 20px;
+			float:none;
+		}
 		svg{
-			margin: 53px 0;
+			margin: 35px 0;
+			height: 70px;
+			@include  breakpoint(small) {
+				height: auto;
+				margin: 53px 0;
+			}
 		}
 		span{
 			position: absolute;
 			top:-52px;
 			left: 22px;
-			font:$ebold 95px $text;
+			font:$ebold 70px $text;
 			color:$theme-color;
+			@include breakpoint(small) {
+				font-size: 95px;
+			}
 		}
 	}
 	.content{
+		float:right;
+		width: calc(100% - 160px);
+		@include breakpoint(small) {
+			float:none;
+			width: 100%;
+		}
 		p{
-			font: $regular 20px/30px $text;
+			font: $regular 14px/30px $text;
+			text-align: left;
+			@include breakpoint(small) {
+				font: $regular 20px/30px $text;
+				text-align: center;
+			}
 		}
 	}
 }

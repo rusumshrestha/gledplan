@@ -1,3 +1,13 @@
 .background-block{
 	background: $grey;
+	img,svg{
+		display: block;
+		margin:0 auto 20px;
+	}
+	.four-col{
+		align-items:middle;
+		a{
+			display: block;
+		}
+	}
 }

@@ -6,12 +6,19 @@
 	.item{
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position: left top;
-		padding:102px 0  0 17%;
+		background-position: 70% 0;
+		padding:40px;
+		@include breakpoint(small) {
+			padding:102px 0  0 17%;
+			background-position: left top;
+		}
 		p{
-			font:$ebold 45px/54px $text;
+			font:$ebold 24px/30px $text;
 			color:$white;
-			max-width: 525px;
+			@include breakpoint(small) {
+				font:$ebold 45px/54px $text;
+				max-width: 525px;
+			}
 		}
 	}
 }

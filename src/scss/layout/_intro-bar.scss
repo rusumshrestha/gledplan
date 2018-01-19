@@ -1,7 +1,10 @@
 .intro-bar{
-	font-size:29px;
+	font-size:20px;
 	font-weight: $bold;
 	position: relative;
 	padding: 10px 0;
 	@include border(bottom,1px,solid,$grey-dark);
+	@include breakpoint(small) {
+		font-size:29px;
+	}
 }
