@@ -1,0 +1,102 @@
+footer {
+	a {
+		font-weight: $light;
+		font-size: 12px;
+	}
+	h2 {
+			font-size: 16px;
+			margin-bottom: 10px;
+		}
+		li{
+			line-height: 1;
+		}
+
+	.footer-top {
+		text-align: center;
+
+		@include breakpoint(small) {
+			text-align: left;
+		}
+
+		background: rgba($grey, .5);
+		padding: 40px 0 80px;
+
+		a {
+			display: inline-block;
+			line-height: 21px;
+		}
+
+	}
+
+	.footer-bottom {
+		position: relative;
+		.foot-quick-menu {
+			text-align: center;
+
+			ul {
+				li {
+					display:block;
+					@include breakpoint(small){
+						float: left;
+						&:after {
+							content: "|";
+							margin: 0 10px;
+							display: inline-block;
+							font-size: 12px;
+							font-weight: $light;
+						}
+
+						&:last-child {
+							&:after {
+								display: none;
+							}
+
+						}
+					}
+					@include breakpoint(medium) {
+						display: inline-block;
+						float: none;
+					}
+
+					a {
+						display: inline-block;
+					}
+
+				}
+
+			}
+
+		}
+		.foot-doc-menu{
+			background: $theme-color;
+			padding: 15px;
+			@include breakpoint(small) {
+				position: absolute;
+				right:0;
+				top:-60px;
+				min-width: 305px;
+
+			}
+			@include breakpoint(medium) {
+				right: -25px;
+			}
+			h2{
+				margin-bottom: 15px;
+			}
+			li{
+				margin-bottom: 2px;
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+			a{
+				display: block;
+				font-weight: $bold;
+				&:hover{
+					color:$white;
+				}
+			}
+		}
+	}
+
+}

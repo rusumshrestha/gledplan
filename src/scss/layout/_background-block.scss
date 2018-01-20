@@ -1,13 +1,28 @@
 .background-block{
 	background: $grey;
-	img,svg{
+	padding: 40px;
+	.img-block{
 		display: block;
-		margin:0 auto 20px;
+		height: 135px;
+		line-height: 135px;
+		margin-bottom: 20px;
+		img,svg{
+			vertical-align: middle;
+			// display: block;
+			margin:0 auto;
+		}
+
 	}
 	.four-col{
-		align-items:middle;
+		margin-bottom: 60px;
 		a{
 			display: block;
+			color:$magenta;
+			font-weight: $semi;
+			font-size: 20px;
+			&:hover{
+				color:$theme-color;
+			}
 		}
 	}
 }

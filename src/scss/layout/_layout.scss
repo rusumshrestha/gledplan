@@ -77,9 +77,12 @@
    	/* TWO COL
    	   ========================================================================== */
    .two-col{
-   		margin-left: -30px;
-   		display: flex;
-   		flex-wrap:nowrap;
+   		
+         @include breakpoint(x-small) {
+            margin-left: -30px;
+      		display: flex;
+      		flex-wrap:nowrap;
+         }
    		.col{
    			@include breakpoint(x-small) {
 				width: calc(50% - 30px);
@@ -110,3 +113,9 @@
    }
 
 
+
+
+.common-block{
+  margin-top: 60px;
+  margin-bottom: 60px;
+}

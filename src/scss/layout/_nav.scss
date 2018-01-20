@@ -75,8 +75,11 @@
 
 .main-menu {
 	float: left;
+	position: relative;
+	z-index: 99;
 	margin-left: 39px;
 	margin-top: 49px;
+	@include transition_hover(1s);
 	@include breakpointMax(medium) {
 		position: absolute;
 		top: 50px;
