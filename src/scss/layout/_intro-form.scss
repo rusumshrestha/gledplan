@@ -1,11 +1,16 @@
 .intro-form {
 	margin-bottom: 40px;
+	margin-top: 0;
 	.global-form {
 		background: $theme-color;
-		margin-top: -94px;
-		position: relative;
-		z-index: 1;
-		padding: 91px 70px 75px;
+		padding: 40px 15px;
+		margin-top: 0;
+		@include breakpoint(medium){
+			margin-top: -100px;
+			position: relative;
+			z-index: 1;
+			padding: 91px 70px 75px;
+		}
 	}
 
 	.btn-blue {
@@ -21,7 +26,70 @@
 
 	ul {
 		li {
-			float: left;
+			@include breakpoint(medium){
+				float: left;
+			}
+			&.slider-wrapper{
+				@include breakpoint(medium){
+					width: 645px;
+				}
+				.rangeslider--horizontal{
+					@include breakpoint(medium){
+						width: 433px;
+						margin:23px 0 0 0;
+						float: left;
+					}
+					&:before{
+						content:"€ 5000";
+						left: 0;
+					}
+					&:after{
+						content:"€ 75000";
+						right: 0;
+					}
+					&:after,&:before{
+						position: absolute;
+						top:30px;
+						color:$white;
+						font-weight: $semi;
+						font-size: 18px;
+					}
+				}
+				.range-output{
+					float: left;
+					width: 48%;
+					top:60px;
+					@include breakpoint(medium){
+						float: right;
+						width: 173px;
+						top:0;
+					}
+					color:$grey-dark;
+					font-size: 20px;
+					background: $white;
+					@include border-radius(4px);
+					padding: 10px 10px 10px 30px;
+					position: relative;
+					&:before{
+						content:"€ ";
+						position:absolute;
+						left: 10px;
+					}
+				}
+			}
+			&:last-child{
+				float: right;
+				width: 48%;
+				margin-top: 11px;
+				button{
+					width: 100%;
+				}
+				@include breakpoint(medium){
+					float: right;
+					width: 212px;
+					margin-top: 0;
+				}
+			}
 		}
 
 	}
@@ -29,7 +97,7 @@
 .steps-intro{
 	background: $primary-color;
 	ul{
-		@include breakpoint(small) {
+		@include breakpoint(medium) {
 			text-align: center;
 		}
 		li{
@@ -40,10 +108,40 @@
 			display: block;
 			float:none;
 			padding: 0 15px;
-			@include breakpoint(small) {
+			@include breakpoint(medium) {
 				display: inline-block;
 				width: 33.33%;
 			}
 		}
 	}
+}
+
+.rangeslider--horizontal{
+	height: 8px;
+	background: $white;
+	@include border-radius(2px);
+	box-shadow: none;
+}
+.rangeslider__handle{
+	@include border(all, 6px, solid, $primary-color);
+	background-image: none;
+	box-shadow: none;
+	&:after{
+		display: none;
+	}
+}
+
+.rangeslider__fill{
+	background:$primary-color;
+	@include border-radius(2px);
+	box-shadow: none;
+}
+.rangeslider--active .rangeslider__handle{
+	box-shadow: none;
+	background: $white;
+	background-image: none;
+}
+
+.rangeslider--horizontal .rangeslider__handle{
+	top:-15px;
 }

@@ -88,6 +88,8 @@
 		padding: 0 20px;
 		z-index: 2;
 		display: none;
+		margin:0;
+		background: $white;
 	}
 	ul {
 		margin: 0;
@@ -98,12 +100,15 @@
 		}
 
 		a {
-			color: $grey-dark;
+			color:rgba($grey-dark,.7);
 			text-decoration: none;
 			display: block;
 			font-size: 15px;
 			line-height: 1;
 			text-transform: uppercase;
+			@include breakpoint(small){
+				color:rgba($grey-dark,1);
+			}
 		}
 
 		li {
@@ -119,14 +124,11 @@
 			@include breakpointMax(medium) {
 				display: block;
 				width: 100%;
-				padding: 0 70px 0 0;
-			}
-			@include breakpointMax(large) {
-				padding: 0 15px;
-			}
-
-			@include breakpointMax(x-large) {
-				padding: 0 25px;
+				padding: 0;
+				margin:0 0 30px 0;
+				&:last-child{
+					margin-bottom: 0;
+				}
 			}
 
 			&:first-child {
@@ -146,7 +148,7 @@
 
 			&:hover {
 				a {
-					color: #054068;
+					color: $grey-dark;
 				}
 
 				ul.sub-menu {
@@ -157,7 +159,7 @@
 
 			&.active {
 				a {
-					color: #054068;
+					color: $grey-dark;
 				}
 
 			}
@@ -165,31 +167,38 @@
 			ul.sub-menu {
 				position: absolute;
 				top: 100%;
-				left: 15px;
-				background: #054068;
+				background: $white;
 				width: 240px;
 				z-index: 2;
 				display: none;
-				padding: 0px 20px;
 				@include breakpointMax(medium) {
 					position: static;
 					width: 100%;
 					background: transparent;
+					display: block;
 				}
 
 				li {
 					display: block;
 					width: 100%;
+					margin:0;
 
 					>a {
-						line-height: 1.5;
+						line-height: 1.5;						
+						
 					}
 
 					a {
-						color: #fff;
-						padding: 10px 0;
+						color: $grey-dark;
+						font-size: 15px;
+						padding: 14px 20px;
+						text-transform: none;
 						@include breakpointMax(medium) {
-							color: #054068;
+							color: $grey-dark;
+							padding: 10px 0;
+						}
+						&:hover{
+							background: $theme-color;
 						}
 					}
 

@@ -6,7 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Gled Plan :: Homepage</title>
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+		<link rel="stylesheet" href="dist/css/rangeslider.css">
 		<link rel="stylesheet" href="dist/css/style.css">
+		
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -113,8 +115,9 @@
 				<div class="global-form">
 					<form action="#">
 						<ul>
-							<li class="slidecontainer"><input type="range" class="slider" id="my-range" min="5000" max="15000"></li>
-							<li class="range-value"><span id="range-value"></span></li>
+							<li class="slider-wrapper">
+								<input type="range" min="5000" max="75000" step="1" value="15000" data-rangeslider style="width: 100%;">
+							</li>
 							<li>
 								<button class="btn btn-blue" type="submit">
 								<i class="icon-arrow-right"></i>Lening berekenen
@@ -305,7 +308,7 @@
 						<div class="col">
 							<a href="#" title="">
 								<span class="img-block">
-								<img src="dist/images/icons/icon-car.png" alt="Nieuwe auto">
+									<img src="dist/images/icons/icon-car.png" alt="Nieuwe auto">
 								</span>
 								Nieuwe auto<i class="icon-arrow-right"></i>
 							</a>
@@ -313,7 +316,7 @@
 						<div class="col">
 							<a href="#" title="">
 								<span class="img-block">
-								<img src="dist/images/icons/icon-doc.svg" alt="Oversluiten" class="svg">
+									<img src="dist/images/icons/icon-doc.svg" alt="Oversluiten" class="svg">
 								</span>
 								Oversluiten<i class="icon-arrow-right"></i>
 							</a>
@@ -321,7 +324,7 @@
 						<div class="col">
 							<a href="#" title="">
 								<span class="img-block">
-								<img src="dist/images/icons/icon-question.svg" alt="Iets anders" class="svg">
+									<img src="dist/images/icons/icon-question.svg" alt="Iets anders" class="svg">
 								</span>
 								Iets anders<i class="icon-arrow-right"></i>
 							</a>
@@ -410,11 +413,11 @@
 				</div>
 			</div>
 		</footer>
-		<div class="overlay"></div>
 		<!-- END FOOTER -->
 		<script type='text/javascript' src='dist/js/jquery.js'></script>
 		<script type='text/javascript' src='dist/js/nav.js'></script>
 		<script type='text/javascript' src='dist/js/owl.carousel.min.js'></script>
+		<script type='text/javascript' src='dist/js/rangeslider.min.js'></script>
 		<script type='text/javascript' src='dist/js/main.js'></script>
 		<script>
 			function reset_menu() {
@@ -426,6 +429,7 @@
 					$(this).toggleClass('active');
 					$('.main-menu').slideToggle();
 				});
+				// $('input[type="range"]').rangeslider();
 				$('.owl-carousel').owlCarousel({
 				loop:true,
 				margin:0,
@@ -441,20 +445,25 @@
 				items:1
 				}
 				}
-				})
+				});
 			});
 		</script>
 		<script>
-			var slider = document.getElementById("my-range");
-			var output = document.getElementById("range-value");
-			output.innerHTML = slider.value;
-			slider.oninput = function() {
-			output.innerHTML = this.value;
-			}
-
-			 jQuery(".main-menu").hover(function () {
-			    jQuery('body').toggleClass("result_hover");
-			 });
+		jQuery('input[type="range"]').rangeslider({
+    polyfill : false,
+    onInit : function() {
+        this.output = jQuery( '<div class="range-output" />' ).insertAfter( this.$range).html( this.$element.val() );
+    },
+    onSlide : function( position, value ) {
+        this.output.html( value );
+    }
+});
+			jQuery(".main-menu").hover(function () {
+			jQuery('body').toggleClass("result_hover");
+			});
+		</script>
+		<script>
+		
 		</script>
 	</body>
 </html>
