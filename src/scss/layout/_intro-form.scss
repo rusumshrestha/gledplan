@@ -26,18 +26,24 @@
 
 	ul {
 		li {
-			@include breakpoint(medium){
+			@include breakpoint(medium) {
 				float: left;
 			}
 			&.slider-wrapper{
-				@include breakpoint(medium){
+				@include breakpoint(medium) {
+					width: calc(100% - 250px);
+				}
+				@include breakpoint(large) {
 					width: 645px;
 				}
 				.rangeslider--horizontal{
-					@include breakpoint(medium){
-						width: 433px;
+					@include breakpoint(medium) {
+						width: calc(100% - 170px);
 						margin:23px 0 0 0;
 						float: left;
+					}
+					@include breakpoint(large) {
+						width: 433px;
 					}
 					&:before{
 						content:"€ 5000";
@@ -59,10 +65,13 @@
 					float: left;
 					width: 48%;
 					top:60px;
-					@include breakpoint(medium){
+					@include breakpoint(medium) {
+						width: 130px;
 						float: right;
-						width: 173px;
 						top:0;
+					}
+					@include breakpoint(large) {
+						width: 173px;
 					}
 					color:$grey-dark;
 					font-size: 20px;
@@ -83,11 +92,15 @@
 				margin-top: 11px;
 				button{
 					width: 100%;
+					@include breakpoint(medium) {
+					padding: 16px 14px; 
 				}
-				@include breakpoint(medium){
+				}
+				@include breakpoint(medium) {
 					float: right;
 					width: 212px;
 					margin-top: 0;
+
 				}
 			}
 		}
@@ -108,9 +121,18 @@
 			display: block;
 			float:none;
 			padding: 0 15px;
+			&:last-child{
+				float:none;
+				width: 100%;
+				margin:0;
+			}
 			@include breakpoint(medium) {
 				display: inline-block;
-				width: 33.33%;
+				width: 33%;
+				&:last-child{
+					width: 33%;
+					padding: 0 15px;
+				}
 			}
 		}
 	}
