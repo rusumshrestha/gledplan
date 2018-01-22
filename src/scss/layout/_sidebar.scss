@@ -1,0 +1,105 @@
+.sidebar {
+	.global-form {
+		margin: 0;
+		padding: 20px 15px;
+	}
+
+	.intro-form {
+		ul {
+			li{
+				display: block;
+				float: none;
+				&:last-child{
+					width: 100%;
+					margin-top: 130px;
+					@include breakpoint(x-small) {
+						width: 68%;
+						margin-top: 69px;
+						float: right;
+					}
+				}
+			}
+			li.slider-wrapper {
+				position: relative;
+				width: 100%;
+				.rangeslider--horizontal{
+					width: 100%;
+				}
+				.range-output{
+					position: absolute;
+					width: 100%;
+					top:78px;
+					
+					@include breakpoint(x-small) {
+						top:78px;
+						width: 30%;
+					}
+					@include breakpoint(medium) {
+						top:100px;
+					}
+				}
+			}
+
+		}
+
+	}
+	.steps-intro{
+		ul{
+			li{
+				text-align: left;
+				&:last-child{
+					width: 100%;
+					margin:0;
+					float: none;
+				}
+			}
+		}
+	}
+	
+	.number-list{
+		padding: 15px;
+		ol{
+			padding-left: 16px;
+			li{
+				list-style: decimal;
+			}
+		}
+	}
+}
+
+.statement {
+	.content{
+		ul{
+			li{
+				span{
+					float: left;
+					width: 60%;
+					strong{
+						font-weight: $bold;
+					}
+					&:last-child{
+						float: right;
+						text-align:right;
+						width: 35%;
+					}
+				}
+			}
+		}
+	}
+	.note{
+		.icon-block{
+			width: 24px;
+			height: 24px;
+			line-height: 24px;
+			text-align: center;
+			float: left;
+			background: $white;
+			color: $theme-color;
+			@include border-radius(50%);
+		}
+		.msg{
+			float: right;
+			width: calc(100% - 50px);
+		}
+	}
+}

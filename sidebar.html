@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Gled Plan :: Homepage</title>
+		<link rel="stylesheet" href="dist/css/rangeslider.css">
+		<link rel="stylesheet" href="dist/css/style.css">
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<!-- CONTAINER LARGE START -->
+		<div class="container-large">
+			<div class="sidebar">
+
+				<div class="intro-form common-block">
+						<div class="global-form">
+							<form action="#">
+								<ul>
+									<li class="slider-wrapper">
+										<input type="range" min="5000" max="75000" step="1" value="15000" data-rangeslider style="width: 100%;">
+									</li>
+									<li>
+										<button class="btn btn-blue" type="submit">
+										<i class="icon-arrow-right"></i>Lening berekenen
+										</button>
+									</li>
+								</ul>
+							</form>
+						</div>
+						<div class="steps-intro">
+							<ul>
+								<li><i class="icon-tick"></i>Veilig</li>
+								<li><i class="icon-tick"></i>Solide</li>
+								<li><i class="icon-tick"></i>Betrouwbaar</li>
+							</ul>
+						</div>
+				</div>
+
+				<div class="background-block number-list">
+					<ol>
+						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, voluptatibus.</li>
+						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, voluptatibus.</li>
+						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, voluptatibus.</li>
+						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, voluptatibus.</li>
+						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, voluptatibus.</li>
+					</ol>
+				</div>
+
+				<div class="background-block white-bg">
+					<div class="title-block">
+						<h3>Bellen</h3>
+					</div>
+					<div class="content">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+						<time>8.30&nbsp;-&nbsp;18.00 uur</time>
+						<a href="tel:12345678" title="12345666"><i class="icon-phone"></i>020&nbsp;-&nbsp;312539</a>
+					</div>
+				</div>
+
+				<div class="background-block blue-bg statement">
+					<div class="title-block">
+						<h3>Bellen</h3>
+					</div>
+					<div class="content">
+						<ul>
+							<li>
+								<span>Lorem ipsum.</span>
+								<span>&euro; 15.000</span>
+							</li>
+							<li>
+								<span>Lorem ipsum.</span>
+								<span>&euro; 15.000</span>
+							</li>
+							<li>
+								<span>Lorem ipsum.</span>
+								<span>78mnd</span>
+							</li>
+							<li>
+								<span>Lorem ipsum.</span>
+								<span>4,7%</span>
+							</li>
+							<li>
+								<span><strong>Total</strong></span>
+								<span><strong>&euro; 17.394</strong> </span>
+							</li>
+							<li>
+								<span>Lorem ipsum.</span>
+								<span>Lorem ipsum dolor.</span>
+							</li>
+						</ul>
+						<div class="note">
+							<div class="icon-block">
+								+
+							</div>
+							<div class="msg">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, voluptas?
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- CONTAINER LARGE END -->
+		<script type='text/javascript' src='dist/js/jquery.js'></script>
+		<script type='text/javascript' src='dist/js/rangeslider.min.js'></script>
+		<script type='text/javascript' src='dist/js/main.js'></script>
+		
+		<script>
+		jQuery('input[type="range"]').rangeslider({
+		polyfill : false,
+		onInit : function() {
+		this.output = jQuery( '<div class="range-output" />' ).insertAfter( this.$range).html( this.$element.val() );
+			},
+			onSlide : function( position, value ) {
+			this.output.html( value );
+			}
+			});
+			</script>
+		</body>
+	</html>

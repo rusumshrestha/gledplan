@@ -197,6 +197,9 @@ a{
     line-height: 1;
     margin-bottom: 20px;
   }
+  h3{
+    font-size: 20px;
+  }
 }
 .result_hover:after{
   position: absolute;
@@ -209,35 +212,3 @@ a{
   @include transition_hover(.2s);
 }
 
-
-.slider {
-    -webkit-appearance: none;
-    width: 100%;
-    height: 8px;
-    @include border-radius(2px);
-    background: $white;
-    outline: none;
-    @include transition_hover(.2s);
-}
-
-.slider:hover {
-    opacity: 1;
-}
-
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 36px;
-    height: 36px;
-    background: $white;
-    @include border(all, solid, 6px,  $primary-color);
-    @include border-radius(50%);
-    cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    background: #4CAF50;
-    cursor: pointer;
-}

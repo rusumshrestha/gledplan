@@ -26,3 +26,19 @@
 		}
 	}
 }
+.background-block.white-bg{
+	background: $white;
+	a{
+		font-weight: $bold;
+	}
+}
+.background-block.blue-bg{
+	background: $primary-color;
+	color:$white;
+	h1,h2,h3,h4,h5,h6,p,a,li{
+		color:$white;
+	}
+	a{
+		font-weight: $bold;
+	}
+}
