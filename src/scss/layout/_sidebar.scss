@@ -1,4 +1,5 @@
 .sidebar {
+	margin-top: 60px;
 	.global-form {
 		margin: 0;
 		padding: 20px 15px;
@@ -13,7 +14,7 @@
 					width: 100%;
 					margin-top: 130px;
 					@include breakpoint(x-small) {
-						width: 68%;
+						width: 49%;
 						margin-top: 69px;
 						float: right;
 					}
@@ -32,7 +33,7 @@
 					
 					@include breakpoint(x-small) {
 						top:78px;
-						width: 30%;
+						width: 49%;
 					}
 					@include breakpoint(medium) {
 						top:100px;
