@@ -205,12 +205,16 @@ table {
   border-spacing: 0;
 }
 
-strong:after, em:after, b:after {
+strong:after, em:after, b:after, em:after {
   display: none;
 }
 
 strong, b {
   font-weight: 700;
+}
+
+em {
+  font-style: italic;
 }
 
 body {
@@ -1538,16 +1542,22 @@ footer .footer-bottom .foot-doc-menu a:hover {
   float: none;
 }
 
-.sidebar .number-list {
+.number-list {
   padding: 15px;
 }
 
-.sidebar .number-list ol {
+.number-list ol {
   padding-left: 16px;
 }
 
-.sidebar .number-list ol li {
+.number-list ol li {
   list-style: decimal;
+  padding-left: 20px;
+}
+
+.number-list ol li em {
+  margin-bottom: 20px;
+  display: block;
 }
 
 .statement .content ul li span {

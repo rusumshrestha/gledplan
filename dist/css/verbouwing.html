@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Gled Plan :: Inner Page</title>
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
 		<link rel="stylesheet" href="dist/css/rangeslider.css">
 		<link rel="stylesheet" href="dist/css/style.css">
 		
@@ -107,30 +107,25 @@
 					<div class="content-left">
 						<div class="full-width-content common-block">
 							<div class="title-block">
-								<h2>Geld lenen bij Geldplan</h2>
+								<h2>Lenen voor een verbouwing</h2>
 							</div>
 							<div class="content">
-								<h3>In het kort</h3>
-								<p>
-									Via Geldplan kun je zelf online een lening aanvragen in 4 duidelijke en overzichtelijke stappen. We vinden het belangrijk om je goed te informeren als je geld via ons wilt lenen. We informeren je ook over de verplichtingen en risico’s die bij lenen horen.
-								</p>
-								<p>
-									Via Geldplan kun je zelf online een lening aanvragen in 4 duidelijke en overzichtelijke stappen. We vinden het belangrijk om je goed te informeren als je geld via ons wilt lenen. We informeren je ook over de verplichtingen en risico’s die bij lenen horen.
-								</p>
+								<p><strong>Lenen voor een verbouwing</strong><br>Lenen voor een verbouwing Het verbouwen van je woning of de aanschaf van een nieuwe keuken of badkamer is vaak een kostbare aangelegenheid. Vaak sluiten woningbezitters hier een lening of hypotheek voor af.</p>
+								<p>Als je leent voor verbouwing, verbetering of onderhoud van je woning heb je meestal recht op renteaftrek. De rente voor een persoonlijke lening is meestal hoger dan de rente voor een hypotheek en vaak lager dan de rente voor een doorlopend krediet. Taxatie-, afsluit- en notariskosten zijn echter niet van toepassing op een persoonlijke lening. </p>
+								<p>Let er op dat de looptijd van je lening aansluit op de verwachte levensduur van dit deel van je woning (vaak circa 15 jaar) en kies een vaste rente om ook wat betreft maandlasten precies te weten waar je aan toe bent.</p>
 							</div>
-							<a href="#" title="Offerte aanvragen" class="btn btn-primary"><i class="icon-arrow-right"></i>Offerte aanvragen</a>
-							<div class="content">
-								<h3>In het kort</h3>
-								<p>
-									Via Geldplan kun je zelf online een lening aanvragen in 4 duidelijke en overzichtelijke stappen. We vinden het belangrijk om je goed te informeren als je geld via ons wilt lenen. We informeren je ook over de verplichtingen en risico’s die bij lenen horen.
-								</p>
-								<p>
-									Via Geldplan kun je zelf online een lening aanvragen in 4 duidelijke en overzichtelijke stappen. We vinden het belangrijk om je goed te <a href="#" title="Title">informeren</a> als je geld via ons wilt lenen. We informeren je ook over de verplichtingen en risico’s die bij lenen horen.
-								</p>
-							</div>
-							<a href="#" title="Offerte aanvragen" class="btn btn-blue"><i class="icon-arrow-right"></i>Offerte aanvragen</a>
 						</div>
-						
+						<!-- FOUR COL ENDS -->
+						<div class="common-block">
+						<div class="two-col text-center">
+							<div class="col">
+								<a href="#" title="Lening berekenen" class="btn btn-primary"><i class="icon-arrow-right"></i>Lening berekenen</a>
+							</div>
+							<div class="col">
+								<a href="#" title="Offerte aanvragen" class="btn btn-border"><i class="icon-arrow-right"></i>Offerte aanvragen</a>
+							</div>
+						</div>
+						</div>
 					</div>
 					<div class="sidebar">
 						<div class="intro-form common-block">
@@ -271,14 +266,14 @@
 		polyfill : false,
 		onInit : function() {
 		this.output = jQuery( '<div class="range-output" />' ).insertAfter( this.$range).html( this.$element.val() );
-								},
-								onSlide : function( position, value ) {
-								this.output.html( value );
-								}
+							},
+							onSlide : function( position, value ) {
+							this.output.html( value );
+							}
+							});
+								jQuery(".main-menu").hover(function () {
+								jQuery('body').toggleClass("result_hover");
 								});
-									jQuery(".main-menu").hover(function () {
-									jQuery('body').toggleClass("result_hover");
-									});
 			</script>
 		</body>
 	</html>

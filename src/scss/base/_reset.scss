@@ -118,13 +118,16 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-strong,em,b,{
+strong,em,b,em{
   &:after{
     display: none;
   }
 }
 strong,b{
   font-weight: $bold;
+}
+em{
+  font-style: $italic;
 }
 body{
   font: $regular 16px/30px $text;

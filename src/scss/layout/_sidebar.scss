@@ -57,17 +57,23 @@
 		}
 	}
 	
-	.number-list{
+	
+}
+
+.number-list{
 		padding: 15px;
 		ol{
 			padding-left: 16px;
 			li{
 				list-style: decimal;
+				padding-left: 20px;
+				em{
+					margin-bottom: 20px;
+					display: block;
+				}
 			}
 		}
 	}
-}
-
 .statement {
 	.content{
 		ul{
