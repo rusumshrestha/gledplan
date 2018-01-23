@@ -50,3 +50,41 @@
 		}
 	}
 }
+
+.content-sidebar-left, .content-sidebar-right{
+	.four-col {
+		@include breakpoint(small) {
+			margin-top: -60px;
+			flex-wrap:wrap;
+		}
+		@include breakpoint(medium) {
+			margin-top: -60px;
+			flex-wrap:nowrap;
+		}
+		.col{
+			@include breakpoint(small) {
+				width: calc(50% - 30px);
+				margin-top:60px;
+			}
+		}
+	}
+	.icon-block-content {
+		.icon-block{
+			@include breakpoint(medium) {
+				width: 150px;
+				height: 150px;
+			}
+			span{
+				@include breakpoint(medium) {
+					font-size: 80px;
+				}
+			}
+			svg{
+				@include breakpoint(medium) {
+					height: 60px;
+					margin:44px 0;
+				}
+			}
+		}
+	}
+}

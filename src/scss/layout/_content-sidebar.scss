@@ -1,0 +1,38 @@
+.content-sidebar-left{
+	.content-left{
+		margin-bottom: 30px;
+		@include breakpoint(small) {
+			width: calc(100% - 350px);
+			margin-bottom: 0;
+			float: left;
+		}
+	}
+	.sidebar{
+		@include breakpoint(small) {
+			width: 282px;
+			float: right;
+		}
+	}
+}
+
+.content-sidebar-right{
+	.content-right{
+		@include breakpoint(small) {
+			width: calc(100% - 350px);
+			float: right;
+		}
+	}
+	.sidebar{
+		margin-bottom: 30px;
+		@include breakpoint(small) {
+			margin-bottom: 0;
+			float: left;
+			width: 325px;
+		}
+	}
+}
+// .sidebar{
+// 	@include breakpoint(small) {
+// 		width: 282px;
+// 	}
+// }

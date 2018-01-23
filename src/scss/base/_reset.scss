@@ -118,7 +118,14 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
+strong,em,b,{
+  &:after{
+    display: none;
+  }
+}
+strong,b{
+  font-weight: $bold;
+}
 body{
   font: $regular 16px/30px $text;
   color:$grey-dark;
@@ -173,6 +180,19 @@ p{
   &:last-child{
     margin-bottom: 0;
   }
+  a{
+    font-size: 16px;
+    color:$primary-color;
+    text-decoration: underline;
+    @include transition_hover();
+    &:hover{
+      text-decoration: underline;
+      color:$theme-color;
+    }
+    &:after{
+      display: none;
+    }
+  }
 }
 a{
   font:$regular 15px $text;
@@ -199,6 +219,8 @@ a{
   }
   h3{
     font-size: 20px;
+    line-height: 1;
+    margin-bottom: 20px;
   }
 }
 .result_hover:after{
