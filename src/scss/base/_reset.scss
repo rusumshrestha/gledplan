@@ -125,6 +125,8 @@ strong,em,b,em{
 }
 strong,b{
   font-weight: $bold;
+  clear: both;
+  display: block;
 }
 em{
   font-style: $italic;
@@ -221,9 +223,10 @@ a{
     margin-bottom: 20px;
   }
   h3{
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1;
     margin-bottom: 20px;
+    font-weight: $bold;
   }
 }
 .result_hover:after{
@@ -237,3 +240,18 @@ a{
   @include transition_hover(.2s);
 }
 
+
+.custom-margin{
+  margin:0 0 50px 0;
+  @include breakpoint(medium) {
+    margin:0 0 100px 200px
+  }
+}
+.content-sidebar-left,.content-sidebar-right{
+  .custom-margin{
+    margin:0 0 50px 0; 
+  }
+}
+.mb-40{
+  margin-bottom: 40px;
+}
