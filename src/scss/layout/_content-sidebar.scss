@@ -2,7 +2,7 @@
 	.content-left{
 		margin-bottom: 30px;
 		@include breakpoint(small) {
-			width: calc(100% - 325px);
+			width: calc(100% - 350px);
 			margin-bottom: 0;
 			float: left;
 		}
@@ -18,7 +18,7 @@
 .content-sidebar-right{
 	.content-right{
 		@include breakpoint(small) {
-			width: calc(100% - 325px);
+			width: calc(100% - 350px);
 			float: right;
 		}
 	}
@@ -27,7 +27,7 @@
 		@include breakpoint(small) {
 			margin-bottom: 0;
 			float: left;
-			width: 282px;
+			width: 325px;
 		}
 	}
 }

@@ -14,7 +14,7 @@
 					width: 100%;
 					margin-top: 130px;
 					@include breakpoint(x-small) {
-						width: 49%;
+						width: 58%;
 						margin-top: 69px;
 						float: right;
 					}
@@ -33,7 +33,7 @@
 					
 					@include breakpoint(x-small) {
 						top:78px;
-						width: 49%;
+						width: 40%;
 					}
 					@include breakpoint(medium) {
 						top:100px;

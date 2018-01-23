@@ -55,6 +55,11 @@
 	.four-col {
 		@include breakpoint(small) {
 			margin-top: -60px;
+			flex-wrap:wrap;
+		}
+		@include breakpoint(medium) {
+			margin-top: -60px;
+			flex-wrap:nowrap;
 		}
 		.col{
 			@include breakpoint(small) {

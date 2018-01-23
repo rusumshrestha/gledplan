@@ -62,7 +62,7 @@
    .two-col, .three-col, .four-col{
    		@include breakpoint(small) {
    			display: flex;
-   			flex-wrap:wrap;
+   			flex-wrap:nowrap;
    			margin-left: -30px;
    		}
    		.col{
