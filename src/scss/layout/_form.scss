@@ -1,4 +1,8 @@
-input[type="text"], input[type="password"], input[type="number"], input[type="email"], textarea {
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="email"],
+textarea {
 	&:focus {
 		box-shadow: none;
 		-webkit-box-shadow: none;
@@ -9,14 +13,72 @@ input[type="text"], input[type="password"], input[type="number"], input[type="em
 }
 
 .global-form {
-	input[type="text"], input[type="password"], input[type="number"], input[type="email"], textarea {
+	ul {
+		li {
+			margin-bottom: 40px;
+
+			p {
+				position: relative;
+			}
+
+			label {
+				font-size: 16px;
+				color: $grey-dark;
+				font-weight: $regular;
+				margin-bottom: 10px;
+				display: block;
+
+				i {
+					font-size: 20px;
+					color: $primary-color;
+				}
+
+			}
+
+			li {
+				margin-top: 5px;
+				margin-bottom: 0;
+				margin-left: 55px;
+			}
+
+		}
+
+	}
+
+	input[type="text"],
+	input[type="password"],
+	input[type="number"],
+	input[type="email"],
+	textarea,
+	.range-output {
 		@include border-radius(4px);
-		@include border(all, 1px, solid, $grey);
+		@include border(all, 1px, solid, $grey-dark);
 		@include transition_hover(.1s);
-		padding: 15px;
+		padding: 11px 15px;
+		width: 100%;
+		font: $regular 20px $text;
+		color: $grey-dark;
+		background: #F6F6F6;
+
+		@include breakpoint(small) {
+			width: 389px;
+		}
 
 		&:focus {
 			border-color: $primary-color;
+		}
+
+	}
+
+	.range-output {
+		float: left;
+		padding: 10px 10px 10px 30px;
+		width: 100%;
+		margin-top: 50px;
+
+		@include breakpoint(small) {
+			width: 175px;
+			margin-left: 20px;
 		}
 
 	}
@@ -40,20 +102,36 @@ input[type=checkbox].css-checkbox {
 	border: 0;
 
 	+ label.css-checkbox-label {
-		padding-left: 35px;
-		height: 30px;
+		padding-left: 55px;
 		display: inline-block;
 		line-height: 30px;
-		background-repeat: no-repeat;
 		background-position: 0 0;
-		font-size: 30px;
+		font-size: 20px;
 		vertical-align: middle;
 		cursor: pointer;
+		position: relative;
+
+		&:after {
+			@include border-radius(4px);
+			background: $white;
+			@include border(all, 1px, solid, $grey-dark);
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
 	}
 
 	&:checked {
 		+ label.css-checkbox-label {
-			background-position: 0 -30px;
+			&:after {
+				content: '\e905';
+				font-family: 'icomoon';
+				text-align: center;
+			}
+
 		}
 
 	}
@@ -61,7 +139,6 @@ input[type=checkbox].css-checkbox {
 }
 
 label.css-checkbox-label {
-	background-image: url(http://csscheckbox.com/checkboxes/u/csscheckbox_f60067e68146be412873f96f1d2458cd.png);
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -83,20 +160,30 @@ input[type=radio].css-radio {
 	border: 0;
 
 	+ label.css-radio-label {
-		padding: 35px;
+		padding: 15px 35px;
+		margin-right: 20px;
 		display: inline-block;
 		background-repeat: no-repeat;
 		background-position: 0 0;
 		font-size: 30px;
 		vertical-align: middle;
 		cursor: pointer;
+		font-size: 20px;
+		line-height: 1;
+		@include border-radius(4px);
+		background: #F6F6F6;
+		@include border(all, 1px, solid, $grey-dark);
+		@include transition_hover(.1s);
+		color: $grey-dark;
 	}
 
 	&:checked {
 		background: red;
 
 		+ label.css-radio-label {
-			background: red;
+			background: $primary-color;
+			@include border(all, 1px, solid, $primary-color);
+			color: $white;
 		}
 
 	}
@@ -104,7 +191,6 @@ input[type=radio].css-radio {
 }
 
 label.css-radio-label {
-	// background-image: url(http://csscheckbox.com/checkboxes/u/csscheckbox_f60067e68146be412873f96f1d2458cd.png);
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -113,34 +199,251 @@ label.css-radio-label {
 	user-select: none;
 }
 
-
-
 .custom-select {
 	overflow: hidden;
-	width: 350px;
-	background: $white;
+	width: 100%;
+	background: #F6F6F6;
 	color: $grey-dark;
 	position: relative;
+
+	@include breakpoint(small) {
+		width: 380px;
+	}
 
 	&:after {
 		content: "\e907";
 		font-family: "icomoon";
 		position: absolute;
-		color: #57656C;
+		color: $grey-dark;
 		right: 15px;
 		top: 9px;
 	}
-	 select {
+
+	select {
 		color: $grey-dark;
 		background: transparent;
-		font-size: 20px;
-		font-weight: bold;
-		padding: 10px;
-		// width: 378px;
-		width: 350px;
-		*background: $white;
+		font-size: 16px;
+		padding: 15px;
+		width: 100%;
+		*background: #F6F6F6;
 		-webkit-appearance: none;
 		@include border-radius(4px);
 		@include border(all, 1px, solid, $grey-dark);
+
+		@include breakpoint(small) {
+			width: 380px;
+		}
+
+	}
+
+}
+
+.bullet-list {
+	li {
+		margin-bottom: 10px;
+
+		i {
+			color: $green;
+		}
+
+	}
+
+}
+
+.step-form {
+	.rangeslider--horizontal {
+		background: $grey;
+		float: left;
+		width: 100%;
+		margin-top: 25px;
+		position: relative;
+
+		&:after,
+		&:before {
+			position: absolute;
+			top: 20px;
+		}
+
+		&:before {
+			content: "€ 5000";
+			left: 0;
+		}
+
+		&:after {
+			content: "€ 75000";
+			right: 0;
+		}
+
+		@include breakpoint(small) {
+			width: 433px;
+		}
+
+	}
+
+}
+
+.range-alt {
+	.rangeslider--horizontal {
+		&:before {
+			content: "€ 157";
+			left: 0;
+		}
+
+		&:after {
+			content: "€ 656";
+			right: 0;
+		}
+
+	}
+
+}
+
+.progress-tracker--word-center {
+	padding: 0 100px;
+}
+
+.notification {
+	position: absolute;
+	right: 15px;
+	top:10px;
+
+	i {
+		line-height: 1;
+		margin:0;
+	}
+
+}
+
+.success {
+	i {
+		color: $green;
+	}
+
+}
+.success-bg {
+	input[type="text"],
+	input[type="password"],
+	input[type="number"],
+	input[type="email"],
+	textarea {
+		background: rgba($green,.2);
+		border-color:$green;
+	}
+	i {
+		color: $green;
+	}
+
+}
+.global-form ul li.success-bg label{
+	color: $green;
+}
+.error {
+	i,label {
+		color: $red;
+	}
+
+}
+.error-bg {
+	input[type="text"],
+	input[type="password"],
+	input[type="number"],
+	input[type="email"],
+	textarea {
+		background: rgba($red,.2);
+		border-color:$red;
+	}
+	i,label {
+		color: $red;
+	}
+
+}
+
+.global-form ul li.error-bg label{
+	color: $red;
+}
+.warning {
+	i {
+		color: $theme-color;
+	}
+
+}
+.warning-bg {
+	input[type="text"],
+	input[type="password"],
+	input[type="number"],
+	input[type="email"],
+	textarea {
+		background: rgba($theme-color,.2);
+		border-color:$theme-color;
+	}
+	i {
+		color: $theme-color;
+	}
+
+}
+
+.global-form ul li.warning-bg label{
+	color: $theme-color;	
+}
+
+.global-form ul li.error-bg, .global-form ul li.success-bg,.global-form ul li.warning-bg,
+.global-form ul li.error, .global-form ul li.success,.global-form ul li.warning{
+	p{
+		max-width: 375px;
+	}
+}
+.global-form  .inline-element{
+		@include breakpoint(small){
+			margin-left: -30px;
+		}
+		li{
+			width: 100%;
+			margin-bottom: 10px;
+			margin-left: 0;
+			@include breakpoint(small){
+				margin-bottom: 0;
+				float: left;
+				margin-left: 30px;
+				width: calc(30% - 30px);
+
+			}
+			input[type="text"],
+	input[type="password"],
+	input[type="number"],
+	input[type="email"],
+	textarea {
+				width: 100%;
+			}
+		}
+}
+
+
+.global-form{
+	a{
+	    color: $theme-color;
+	    &:hover{
+	    	color:$primary-color;
+	    }
+	}
+
+	.link-icon {
+		span {
+	    display:  inline-block;
+	    width:  20px;
+	    height:  20px;
+	    background:  $theme-color;
+	    @include border-radius(50%);
+	    margin-right:  10px;
+	    text-align:  center;
+	    line-height: 20px;
+	    font-size: 20px;
+	    color:$white;
+	    @include transition_hover(.2s);
+		}
+		&:hover{
+			span{
+				background: $primary-color;
+			}
+		}
 	}
 }

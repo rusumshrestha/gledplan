@@ -111,21 +111,7 @@
 		<!-- END BANNER -->
 		<!-- INTRO FORM -->
 		<div class="intro-form common-block">
-			<div class="container-medium">
-				<div class="global-form">
-					<form action="#">
-						<ul>
-							<li class="slider-wrapper">
-								<input type="range" min="5000" max="75000" step="1" value="15000" data-rangeslider style="width: 100%;">
-							</li>
-							<li>
-								<button class="btn btn-blue" type="submit">
-								<i class="icon-arrow-right"></i>Lening berekenen
-								</button>
-							</li>
-						</ul>
-					</form>
-				</div>
+			<div class="container-large">
 				<div class="steps-intro">
 					<ul>
 						<li><i class="icon-tick"></i>Veilig</li>
@@ -141,132 +127,188 @@
 			<div class="container-medium">
 				<div class="content-sidebar-left">
 					<div class="content-left">
-						<div class="progress-meter">
-							<div class="track">
-								<span class="progress"></span>
+						<div class="progress-bar">
+							<ul class="progress-tracker progress-tracker--word progress-tracker--word-center">
+								<li class="progress-step is-complete">
+									<span class="progress-marker">
+										<i class="icon-calculator"></i>
+									</span>
+									<span class="progress-text">
+										<h4 class="progress-title">1. Lening berekenen</h4>
+									</span>
+								</li>
+								<li class="progress-step is-active">
+									<span class="progress-marker">
+										<i class="icon-timer"></i>
+									</span>
+									<span class="progress-text">
+										<h4 class="progress-title">2. Lening aanvragen</h4>
+									</span>
+								</li>
+								<li class="progress-step">
+									<span class="progress-marker">
+										<i class="icon-send"></i>
+									</span>
+									<span class="progress-text">
+										<h4 class="progress-title">3. Ontvang je geld</h4>
+									</span>
+								</li>
+							</ul>
+						</div>
+						<div class="full-width-block common-block">
+							<div class="title-block">
+								<h2>Lening aanvraagformulier</h2>
 							</div>
-							<ol>
-								<li><span>Lening berekenen</span></li>
-								<li><span>Lening aanvragen</span></li>
-								<li><span>Ontvang je geld</span></li>
-							</ol>
 						</div>
-						<div class="header">
-							<h1>Lening aanvraagformulier</h1>
+						<div class="global-form step-form">
+							<form action="#">
+								<ul>
+									<li>
+										<div class="title-block">
+											<h3>Gegevens</h3>
+										</div>
+				                        <input type="radio" name="heer" id="heer" class="css-radio">
+				                        <label for="heer" class="css-radio-label">Heer</label>
+				                        <input type="radio" name="heer" id="mevrouw" class="css-radio">
+				                        <label for="mevrouw" class="css-radio-label">Mevrouw</label>
+									</li>
+									<li class="success">
+										<label for="voorletter">Voorletter(s)</label>
+										<p><input type="text" id="voorletter">
+											<span class="notification"><i class="icon-tick"></i></span>
+										</p>
+
+									</li>
+									<li>
+										<label for="tussenvoegsel">Tussenvoegsel (optioneel)</label>
+										<p><input type="text" id="tussenvoegsel"></p>
+									</li>
+									<li>
+										<label for="achternaam">Achternaam (zoals vermeld in paspoort) <i class="icon-info"></i></label>
+										<p><input type="text" id="achternaam"></p>
+									</li>
+									<li>
+										<label for="emailadres">E-mailadres</label>
+										<p><input type="email" id="emailadres"></p>
+									</li>
+									<li>
+										<label for="telefoonnummer">Telefoonnummer</label>
+										<p><input type="number" id="telefoonnummer"></p>
+									</li>
+									<li class="error-bg">
+										<label for="geboortedatum">Geboortedatum niet juist ingevuld</label>
+										<p>
+											<input type="number" id="geboortedatum">
+											<span class="notification"><i class="icon-cal"></i></span>
+										</p>
+									</li>
+									<li>
+										<label>Nationaliteit</label>	
+										<div class="custom-select">
+										  <select>
+										    <option>Nederland</option>
+										    <option>Option 1</option>
+										    <option>Option 2</option>
+										  </select>
+										</div>
+									</li>
+									<li>
+										<label>Burgerlijke staat</label>
+										<p>Als je een geregistreerd partnerschap hebt, gehuwd of samenwonend bent, dan kun je alleen samen een lening aanvragen. Daarom hebben wij ook de gegevens van jouw partner nodig.</p>	
+										<div class="custom-select">
+										  <select>
+										    <option>Kies burgerlijke staat</option>
+										    <option>Option 1</option>
+										    <option>Option 2</option>
+										  </select>
+										</div>
+									</li>
+									<li>
+										<label>Ben je ooit gescheiden?</label>
+				                        <input type="radio" name="ja1" id="ja1" class="css-radio">
+				                        <label for="ja1" class="css-radio-label">Ja</label>
+				                        <input type="radio" name="ja1" id="nee1" class="css-radio">
+				                        <label for="nee1" class="css-radio-label">Nee</label>
+									</li>
+									<li>
+										<label>Heb je inwonende kinderen?</label>
+				                        <input type="radio" name="ja2" id="ja2" class="css-radio">
+				                        <label for="ja2" class="css-radio-label">Ja</label>
+				                        <input type="radio" name="ja2" id="nee2" class="css-radio">
+				                        <label for="nee2" class="css-radio-label">Nee</label>
+									</li>
+									<li>
+										<div class="title-block">
+											<h3>Adresgegevens</h3>
+										</div>
+										<ul class="inline-element">
+											<li>
+												<label>Postcode</label>
+												<p><input type="text" placeholder="mu"></p>
+											</li>
+											<li>
+												<label>Huisnummer</label>
+												<p><input type="text" placeholder="Huisnummer"></p>
+											</li>
+											<li>
+												<label>Toevoeging</label>
+												<p><input type="text" placeholder="Toevoeging"></p>
+											</li>
+										</ul>
+										
+									</li>
+									<li>
+										<div class="title-block">
+											<h3>Inkomsten en uitgaven</h3>
+										</div>
+										<label>Soort inkomen <i class="icon-info"></i></label>
+										<div class="custom-select">
+										  <select>
+										    <option>Kies soort inkomen</option>
+										    <option>Option 1</option>
+										    <option>Option 2</option>
+										  </select>
+										</div>
+										<a href="#" title="Nog een inkomen toevoegen" class="link-icon"><span>+</span>Nog een inkomen toevoegen</a>
+									</li>
+									<li>
+										<label>Woonsituatie</label>
+										<div class="custom-select">
+										  <select>
+										    <option>Kies Woonsituatie</option>
+										    <option>Option 1</option>
+										    <option>Option 2</option>
+										  </select>
+										</div>
+										
+									</li>
+									<li>
+										<label>IBAN rekeningnummer <i class="icon-info"></i></label>
+										<div class="custom-select">
+										  <select>
+										    <option>IBAN rekeningnummer</option>
+										    <option>Option 1</option>
+										    <option>Option 2</option>
+										  </select>
+										</div>
+										<a href="#" title="Bankrekeningnummer omrekenen naar IBAN">Bankrekeningnummer omrekenen naar IBAN</a>
+									</li>
+									<li>
+										<p>Met het versturen van deze aanvraag geef ik toestemming voor het toetsen van mijn gegevens bij het Bureau Krediet Registratie (BKR).</p>
+									</li>
+									<li>
+										<button class="btn btn-primary">
+											<i class="icon-arrow-right"></i>Vrijblijvend aanvragen	
+										</button>
+									</li>
+									
+								</ul>
+							</form>
 						</div>
-						<form action="">
-							<fieldset>
-								<legend>Gegevens</legend>
-								<p>
-									<label>Aanhef</label>
-									<input type="radio" name="aanhef" id="mr" value="Heer" class="radio-btn" checked="checked">
-									<label for="mr">Heer</label>
-									<input type="radio" name="aanhef" id="mw" value="Mevrouw" class="radio-btn">
-									<label for="mw">Mevrouw</label>
-								</p>
-								<p>
-									<label for="voorletters">Voorletter(s)</label>
-									<input type="text" name="voorletters" id="voorletters" placeholder="Voorletter(s)" required="required">
-								</p>
-								<p>
-									<label for="tussenvoegsel">Tussenvoegsel (optioneel)</label>
-									<input type="text" name="tussenvoegsel" id="tussenvoegsel" placeholder="Tussenvoegsel">
-								</p>
-								<p>
-									<label for="achternaam">Achternaam (zoals vermeld in paspoort) <abbr title="info">i</abbr></label>
-									<input type="text" name="achternaam" id="achternaam" placeholder="Achternaam" required="required">
-								</p>
-								<p>
-									<label for="email">E-mailadres</label>
-									<input type="email" name="email" id="email" placeholder="E-mailadres" required="required">
-								</p>
-								<p>
-									<label for="telefoonnummer">Telefoonnummer</label>
-									<input type="tel" name="telefoonnummer" id="telefoonnummer" placeholder="Telefoonnummer" required="required">
-								</p>
-								<p>
-									<label for="geboortedatum">Geboortedatum</label>
-									<input type="date" name="geboortedatum" id="geboortedatum" placeholder="Geboortedatum" required="required">
-								</p>
-								<p>
-									<label for="nationaliteit">Nationaliteit</label>
-									<select name="select1" id="nationaliteit">
-										<option value="nl" selected>Nederland</option>
-										<option value="be">Belgie</option>
-										<option value="de">Duitsland</option>
-										<option value="fr">Frankrijk</option>
-										<option value="anders">Anders</option>
-									</select>
-								</p>
-								<p>
-									<label for="burgerlijkestaat">Burgerlijke staat</label>
-									<sub style="display:block;">Ipsum eiusmod est sunt eiusmod enim. Reprehenderit laborum et laborum consequat. Et elit non est laboris reprehenderit ullamco sunt.</sub>
-									<select name="select1" id="burgerlijkestaat">
-										<option value="0" selected>Kies burgerlijke staat</option>
-										<option value="1">Alleenstaand</option>
-										<option value="2">Gehuwd</option>
-										<option value="3">Samenwonend</option>
-									</select>
-								</p>
-								<p>
-									<label>Ben je ooit gescheiden?</label>
-									<input type="radio" name="gescheiden" id="gescheiden-ja" value="Nee" class="radio-btn">
-									<label for="gescheiden-ja">Ja</label>
-									<input type="radio" name="gescheiden" id="gescheiden-nee" value="Ja" class="radio-btn" checked="checked">
-									<label for="gescheiden-nee">Nee</label>
-								</p>
-								<p>
-									<label>Heb je inwonende kinderen?</label>
-									<input type="radio" name="kinderen" id="kinderen-ja" value="Nee" class="radio-btn">
-									<label for="kinderen-ja">Ja</label>
-									<input type="radio" name="kinderen" id="kinderen-nee" value="Ja" class="radio-btn" checked="checked">
-									<label for="kinderen-nee">Nee</label>
-								</p>
-							</fieldset>
-							<fieldset>
-								<legend>Adresgegevens</legend>
-								<p>
-									<label for="postcode">Postcode</label>
-									<input type="text" name="postcode" id="postcode" placeholder="1234 AB">
-									<label for="huisnummer">Huisnummer</label>
-									<input type="text" name="huisnummer" id="huisnummer" placeholder="Huisnummer">
-									<label for="toevoeging">Toevoeging</label>
-									<input type="text" name="toevoeging" id="toevoeging" placeholder="Toevoeging">
-								</p>
-							</fieldset>
-							<fieldset>
-								<legend>Inkomsten en uitgaven</legend>
-								<p>
-									<label for="inkomen">Soort inkomen <abbr title="info">i</abbr></label>
-									<select name="select1" id="inkomen">
-										<option value="0" selected>Kies soort inkomen</option>
-										<option value="1">Dienstverband</option>
-										<option value="2">Freelance</option>
-									</select>
-									<button class="add-option">Nog een inkomen toevoegen</button>
-								</p>
-								<p>
-									<label for="woonsituatie">Woonsituatie</label>
-									<select name="select1" id="woonsituatie">
-										<option value="0" selected>Kies woonsituatie</option>
-										<option value="1">Koophuis</option>
-										<option value="2">Huurhuis</option>
-									</select>
-								</p>
-								<p>
-									<label for="rekeningnummer">IBAN Rekeningnummer <abbr title="info">i</abbr></label>
-									<input type="text" name="rekeningnummer" id="rekeningnummer" placeholder="NL99BANK0123456789" required="required">
-								</p>
-								<p>Ullamco deserunt aliquip sint aliqua et labore dolore id non id minim. Elit enim officia dolore proident qui ut nisi enim velit enim laboris labore Lorem. Aliqua tempor eu ut pariatur nisi commodo nostrud voluptate. Fugiat irure culpa esse enim occaecat nostrud qui occaecat aute Lorem pariatur officia velit. Duis tempor veniam fugiat elit voluptate cupidatat deserunt pariatur ea reprehenderit ex duis. Veniam aliqua ex consectetur incididunt. Ex enim officia in consequat est sint enim.</p>
-							</fieldset>
-							<fieldset>
-								<p><button type="submit">Vrijblijvend aanvragen</button></p>
-							</fieldset>
-						</form>
 					</div>
 					
 					<div class="sidebar">
-						<div class="background-block number-list">
+						<div class="background-block number-list sidebar-widget">
 							<ol>
 								<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, voluptatibus.</li>
 								<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, voluptatibus.</li>
@@ -275,6 +317,47 @@
 								<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, voluptatibus.</li>
 							</ol>
 						</div>
+						<div class="background-block blue-bg statement sidebar-widget">
+					<div class="title-block">
+						<h3>Bellen</h3>
+					</div>
+					<div class="content">
+						<ul>
+							<li>
+								<span>Lorem ipsum.</span>
+								<span>&euro; 15.000</span>
+							</li>
+							<li>
+								<span>Lorem ipsum.</span>
+								<span>&euro; 15.000</span>
+							</li>
+							<li>
+								<span>Lorem ipsum.</span>
+								<span>78mnd</span>
+							</li>
+							<li>
+								<span>Lorem ipsum.</span>
+								<span>4,7%</span>
+							</li>
+							<li>
+								<span><strong>Total</strong></span>
+								<span><strong>&euro; 17.394</strong> </span>
+							</li>
+							<li>
+								<span>Lorem ipsum.</span>
+								<span>Lorem ipsum dolor.</span>
+							</li>
+						</ul>
+						<div class="note">
+							<div class="icon-block">
+								+
+							</div>
+							<div class="msg">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, voluptas?
+							</div>
+						</div>
+					</div>
+				</div>
 						<div class="background-block white-bg">
 							<div class="title-block">
 								<h3>Bellen</h3>
@@ -400,14 +483,14 @@
 		polyfill : false,
 		onInit : function() {
 		this.output = jQuery( '<div class="range-output" />' ).insertAfter( this.$range).html( this.$element.val() );
-								},
-								onSlide : function( position, value ) {
-								this.output.html( value );
-								}
-								});
-									jQuery(".main-menu").hover(function () {
-									jQuery('body').toggleClass("result_hover");
+									},
+									onSlide : function( position, value ) {
+									this.output.html( value );
+									}
 									});
+										jQuery(".main-menu").hover(function () {
+										jQuery('body').toggleClass("result_hover");
+										});
 			</script>
 		</body>
 	</html>

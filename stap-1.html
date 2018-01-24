@@ -111,21 +111,7 @@
 		<!-- END BANNER -->
 		<!-- INTRO FORM -->
 		<div class="intro-form common-block">
-			<div class="container-medium">
-				<div class="global-form">
-					<form action="#">
-						<ul>
-							<li class="slider-wrapper">
-								<input type="range" min="5000" max="75000" step="1" value="15000" data-rangeslider style="width: 100%;">
-							</li>
-							<li>
-								<button class="btn btn-blue" type="submit">
-								<i class="icon-arrow-right"></i>Lening berekenen
-								</button>
-							</li>
-						</ul>
-					</form>
-				</div>
+			<div class="container-large">
 				<div class="steps-intro">
 					<ul>
 						<li><i class="icon-tick"></i>Veilig</li>
@@ -141,86 +127,115 @@
 			<div class="container-medium">
 				<div class="content-sidebar-left">
 					<div class="content-left">
-						<div class="progress-meter">
-							<div class="track">
-								<span class="progress"></span>
+						<div class="progress-bar">
+							<ul class="progress-tracker progress-tracker--word progress-tracker--word-center">
+								<li class="progress-step is-complete">
+									<span class="progress-marker">
+										<i class="icon-calculator"></i>
+									</span>
+									<span class="progress-text">
+										<h4 class="progress-title">1. Lening berekenen</h4>
+									</span>
+								</li>
+								<li class="progress-step is-active">
+									<span class="progress-marker">
+										<i class="icon-timer"></i>
+									</span>
+									<span class="progress-text">
+										<h4 class="progress-title">2. Lening aanvragen</h4>
+									</span>
+								</li>
+								<li class="progress-step">
+									<span class="progress-marker">
+										<i class="icon-send"></i>
+									</span>
+									<span class="progress-text">
+										<h4 class="progress-title">3. Ontvang je geld</h4>
+									</span>
+								</li>
+							</ul>
+						</div>
+						<div class="full-width-block common-block">
+							<div class="title-block">
+								<h2>Geld lenen? Bereken je maandlasten</h2>
 							</div>
-							<ol>
-								<li><span>Lening berekenen</span></li>
-								<li><span>Lening aanvragen</span></li>
-								<li><span>Ontvang je geld</span></li>
-							</ol>
+							<div class="content">
+								<p>Wil je weten wat een bepaald leningbedrag je per maand kost? Je maandlasten bereken je via Geldplan eenvoudig zelf online.</p>
+							</div>
 						</div>
-						<div class="header">
-							<h1>Geld Lenen? Bereken je maandlasten</h1>
-							<p>Anim aliquip esse non fugiat Lorem eu irure commodo. Cupidatat officia tempor nisi aliquip tempor dolor laboris dolor amet. Voluptate ipsum ea ad sint irure amet do sit. Est ea quis amet dolor amet aliquip anim aliquip quis laborum labore ad exercitation elit. Consequat labore laborum sunt minim laboris consectetur ipsum occaecat.</p>
-						</div>
-						<form action="">
-							<fieldset>
-								<p>
-									<input type="checkbox" name="group1" id="overstappen">
-									<label for="overstappen">Ik wil overstappen met mijn huidige lening <abbr title="info">i</abbr></label>
-								</p>
-								<p>
-									<label for="loan-goal">Waar wil je voor lenen <abbr title="info">i</abbr></label>
-									<select name="select1" id="load-goal">
-										<option value="1">Extra financiele ruimte/overig</option>
-										<option value="2">Extra financiele ruimte/overig</option>
-										<option value="3">Extra financiele ruimte/overig</option>
-										<option value="4">Extra financiele ruimte/overig</option>
-										<option value="5">Extra financiele ruimte/overig</option>
-									</select>
-								</p>
-							</fieldset>
-							<fieldset>
-								<p>
-									<label for="range1">Hoeveel wil je lenen?</label>
-									<input type="range" name="range1" id="range1" min="5000" max="75000" list="range1list" step="100" value="15000">
-									
-									
-								</p>
-								<p>
-									<label for="range2">Hoeveel wil je per maand betalen? <abbr title="info">i</abbr></label>
-									<input type="range" name="range2" id="range2" min="157" >
-								</p>
-							</fieldset>
-							<fieldset>
-								<p><label>Je maandlasten en je kosten <abbr title="info">i</abbr></label></p>
-								<table>
-									<thead>
-										<tr>
-											<th>
-												<h2>Persoonlijke lening</h2>
-												<p>Vaste rente en looptijd; tussentijds boetevrij aflossen.</p>
-											</th>
-											<tbody>
+						<div class="global-form step-form">
+							<form action="#">
+								<ul>
+									<li>
+										<input type="checkbox" name="option-1" id="option-1" class="css-checkbox">
+										<label for="option-1" class="css-checkbox-label">Ik wil overstappen met mijn huidige lening <i class="icon-info"></i></label>
+										<ul class="bullet-list">
+											<li><i class="icon-tick"></i>Mijn leningen overzichtelijk bij elkaar</li>
+											<li><i class="icon-tick"></i>Mogelijk besparen op mijn lening</li>
+										</ul>
+									</li>
+									<li>
+										<label for="Extra financiële ruimte/overig">Waar wil je voor lenen? <i class="icon-info"></i></label>
+										<div class="custom-select">
+											<select>
+												<option>Extra financiële ruimte/overig</option>
+												<option>Option 1</option>
+												<option>Option 2</option>
+											</select>
+										</div>
+									</li>
+									<li>
+										<label for="Hoeveel wil je lenen?">Hoeveel wil je lenen?</label>
+										<div class="slider-wrapper">
+											<input type="range" min="5000" max="75000" step="1" value="15000" data-rangeslider style="width: 100%;">
+										</div>
+									</li>
+									<li>
+										<label for="Hoeveel wil je maximaal per maand betalen?">Hoeveel wil je maximaal per maand betalen? <i class="icon-info"></i></label>
+										<div class="slider-wrapper range-alt">
+											<input type="range" min="157" max="656" step="1" value="15000" data-rangeslider style="width: 100%;">
+										</div>
+									</li>
+									<li>
+										<label>Je maandlasten en je kosten <i class="icon-info"></i></label>
+										<div class="global-table">
+											<div class="title-block">
+												<h2>Persoonlijke Lening</h2>
+												<span>Vaste rente en looptijd; tussentijds boetevrij aflossen.</span>
+											</div>
+											<table>
 												<tr>
 													<td>Maandtermijn</td>
-													<td>€ 223</td>
+													<td><strong>€ 223</strong></td>
 												</tr>
 												<tr>
 													<td>Looptijd</td>
-													<td>78 mnd</td>
+													<td><strong>78 mnd</strong></td>
 												</tr>
 												<tr>
 													<td>JKP vanaf</td>
-													<td>4,7%</td>
+													<td><strong>4,7%</strong></td>
 												</tr>
 												<tr>
 													<td>Totaalbedrag</td>
-													<td>€ 17.394</td>
+													<td><strong>€ 17.394</strong></td>
 												</tr>
-											</tbody>
-										</tr>
-									</thead>
-								</table>
-								<p><button type="submit">Aanvragen</button></p>
-							</fieldset>
-						</form>
+											</table>
+										</div>
+									</li>
+								</ul>
+							</form>
+						</div>
+						<div class="full-content common-block">
+							<p>De gegevens in dit overzicht zijn een indicatie. Wij zijn hierbij uitgegaan van het laagste rentetarief. Dit tarief kan wijzigen en is afhankelijk van je persoonlijke situatie. De looptijd van de lening is afhankelijk van de rente, het leenbedrag en de maandtermijn. Aan dit overzicht kun je geen rechten ontlenen.</p>
+						</div>
 					</div>
 					
 					<div class="sidebar">
-						<div class="background-block number-list">
+						<div class="background-block number-list sidebar-widget">
+							<div class="title-block">
+								<h2>Hoe werkt Geldplan?</h2>
+							</div>
 							<ol>
 								<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, voluptatibus.</li>
 								<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, voluptatibus.</li>
@@ -229,7 +244,7 @@
 								<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, voluptatibus.</li>
 							</ol>
 						</div>
-						<div class="background-block white-bg">
+						<div class="background-block white-bg sidebar-widget">
 							<div class="title-block">
 								<h3>Bellen</h3>
 							</div>
@@ -354,14 +369,14 @@
 		polyfill : false,
 		onInit : function() {
 		this.output = jQuery( '<div class="range-output" />' ).insertAfter( this.$range).html( this.$element.val() );
-							},
-							onSlide : function( position, value ) {
-							this.output.html( value );
-							}
-							});
-								jQuery(".main-menu").hover(function () {
-								jQuery('body').toggleClass("result_hover");
+								},
+								onSlide : function( position, value ) {
+								this.output.html( value );
+								}
 								});
+									jQuery(".main-menu").hover(function () {
+									jQuery('body').toggleClass("result_hover");
+									});
 			</script>
 		</body>
 	</html>

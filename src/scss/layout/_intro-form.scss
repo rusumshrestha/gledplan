@@ -63,8 +63,9 @@
 				}
 				.range-output{
 					float: left;
-					width: 48%;
+					width: 46%;
 					top:60px;
+					border:none;
 					@include breakpoint(medium) {
 						width: 130px;
 						float: right;
@@ -88,8 +89,9 @@
 			}
 			&:last-child{
 				float: right;
-				width: 48%;
+				width: 46%;
 				margin-top: 11px;
+				margin-bottom: 0;
 				button{
 					width: 100%;
 					@include breakpoint(medium) {
@@ -166,4 +168,19 @@
 
 .rangeslider--horizontal .rangeslider__handle{
 	top:-15px;
+}
+
+.range-output{
+	position: relative;
+	&:before{
+		content:"€ ";
+		position:absolute;
+		left: 10px;
+	}
+}
+.intro-form .global-form ul li{
+	margin-bottom: 0;
+}
+.intro-form  .global-form .range-output{
+	margin:0;
 }

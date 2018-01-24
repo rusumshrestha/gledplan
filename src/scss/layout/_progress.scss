@@ -1,11 +1,11 @@
 .progress-bar {
 	.progress-marker {
-		width: 64px;
-		height: 64px;
+		width: 50px;
+		height: 50px;
 		background: $grey;
 
 		i {
-			font-size: 32px;
+			font-size: 24px;
 			margin: 0;
 			color: $grey-dark;
 		}
@@ -13,13 +13,19 @@
 	}
 
 	.progress-step:not(:last-child)::after {
-		top: 30px;
+		top: 25px;
 	}
 
 	.progress-step::after {
 		background: $grey-dark;
 	}.progress-step.is-complete::after {
 		background: $green-step;
+	}
+	.progress-text h4{
+
+				font-size: 14px;
+				font-weight: $regular;
+				line-height: 1;
 	}
 
 	.is-complete, .is-active {
@@ -32,7 +38,8 @@
 		}
 		.progress-text{
 			h4{
-			color:$green-step;
+				color:$green;
+				font-weight: $semi;
 			}
 		}
 

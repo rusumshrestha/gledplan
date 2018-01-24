@@ -36,8 +36,10 @@ footer {
 			ul {
 				li {
 					display:block;
+					margin: 10px 0;
 					@include breakpoint(small){
 						float: left;
+						margin-bottom: 0;
 						&:after {
 							content: "|";
 							margin: 0 10px;
