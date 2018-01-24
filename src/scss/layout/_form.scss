@@ -1,0 +1,146 @@
+input[type="text"], input[type="password"], input[type="number"], input[type="email"], textarea {
+	&:focus {
+		box-shadow: none;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		outline: none;
+	}
+
+}
+
+.global-form {
+	input[type="text"], input[type="password"], input[type="number"], input[type="email"], textarea {
+		@include border-radius(4px);
+		@include border(all, 1px, solid, $grey);
+		@include transition_hover(.1s);
+		padding: 15px;
+
+		&:focus {
+			border-color: $primary-color;
+		}
+
+	}
+
+	textarea {
+		resize: none;
+	}
+
+}
+
+input[type=checkbox].css-checkbox {
+	position: absolute;
+	z-index: -1000;
+	left: -1000px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+
+	+ label.css-checkbox-label {
+		padding-left: 35px;
+		height: 30px;
+		display: inline-block;
+		line-height: 30px;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		font-size: 30px;
+		vertical-align: middle;
+		cursor: pointer;
+	}
+
+	&:checked {
+		+ label.css-checkbox-label {
+			background-position: 0 -30px;
+		}
+
+	}
+
+}
+
+label.css-checkbox-label {
+	background-image: url(http://csscheckbox.com/checkboxes/u/csscheckbox_f60067e68146be412873f96f1d2458cd.png);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+input[type=radio].css-radio {
+	position: absolute;
+	z-index: -1000;
+	left: -1000px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+
+	+ label.css-radio-label {
+		padding: 35px;
+		display: inline-block;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		font-size: 30px;
+		vertical-align: middle;
+		cursor: pointer;
+	}
+
+	&:checked {
+		background: red;
+
+		+ label.css-radio-label {
+			background: red;
+		}
+
+	}
+
+}
+
+label.css-radio-label {
+	// background-image: url(http://csscheckbox.com/checkboxes/u/csscheckbox_f60067e68146be412873f96f1d2458cd.png);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+
+
+.custom-select {
+	overflow: hidden;
+	width: 350px;
+	background: $white;
+	color: $grey-dark;
+	position: relative;
+
+	&:after {
+		content: "\e907";
+		font-family: "icomoon";
+		position: absolute;
+		color: #57656C;
+		right: 15px;
+		top: 9px;
+	}
+	 select {
+		color: $grey-dark;
+		background: transparent;
+		font-size: 20px;
+		font-weight: bold;
+		padding: 10px;
+		// width: 378px;
+		width: 350px;
+		*background: $white;
+		-webkit-appearance: none;
+		@include border-radius(4px);
+		@include border(all, 1px, solid, $grey-dark);
+	}
+}

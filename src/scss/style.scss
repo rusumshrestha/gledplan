@@ -6,6 +6,8 @@
 @import "base/typography";
 @import "base/reset";
 @import "base/buttons";
+@import "plugins/progress-tracker/progress-tracker-main";
+@import "plugins/owl-carousel/owl.carousel";
 
 
 @import "layout/layout";
@@ -23,8 +25,6 @@
 @import "layout/footer";
 @import "layout/sidebar";
 @import "layout/content-sidebar";
+@import "layout/progress";
+@import "layout/form";
 
-
-
-
-@import "plugins/owl-carousel/owl.carousel";

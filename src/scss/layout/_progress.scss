@@ -1,0 +1,41 @@
+.progress-bar {
+	.progress-marker {
+		width: 64px;
+		height: 64px;
+		background: $grey;
+
+		i {
+			font-size: 32px;
+			margin: 0;
+			color: $grey-dark;
+		}
+
+	}
+
+	.progress-step:not(:last-child)::after {
+		top: 30px;
+	}
+
+	.progress-step::after {
+		background: $grey-dark;
+	}.progress-step.is-complete::after {
+		background: $green-step;
+	}
+
+	.is-complete, .is-active {
+		.progress-marker {
+			background: $green-step;
+			i {
+				color: $white;
+			}
+
+		}
+		.progress-text{
+			h4{
+			color:$green-step;
+			}
+		}
+
+	}
+
+}
