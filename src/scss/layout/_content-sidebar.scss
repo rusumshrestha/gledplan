@@ -1,4 +1,8 @@
 .content-sidebar-left{
+	
+	@include breakpoint (small){
+		padding-left: 95px;
+	}
 	.content-left{
 		margin-bottom: 30px;
 		@include breakpoint(small) {
@@ -16,6 +20,7 @@
 }
 
 .content-sidebar-right{
+	padding-left: 95px;
 	.content-right{
 		@include breakpoint(small) {
 			width: calc(100% - 350px);

@@ -1,5 +1,8 @@
 .banner{
-	height: 350px;
+	height: 250px;
+	@include breakpoint(small){
+		height: 350px;
+	}
 	.container-large, .owl-carousel, .owl-stage-outer, .owl-stage, .owl-item, .item{
 		height: 100%;
 	}
@@ -9,19 +12,28 @@
 		background-position: 70% 0;
 		padding:40px;
 		@include breakpoint(small) {
-			padding:102px 0  0 17%;
+			padding:102px 0  0 0;
 			background-position: left top;
 		}
 		p{
 			font:$ebold 24px/30px $text;
 			color:$white;
+			padding-top: 75px;
 			@include breakpoint(small) {
 				font:$ebold 45px/54px $text;
-				max-width: 525px;
+				max-width: 625px;
+				padding-left: 80px;
+				padding-top: 50px;
+			}
+			@include breakpoint(large) {
+				padding-left: 95px;
 			}
 		}
 	}
 }
 .page-banner{
 	height: 100%;
+}
+.banner-medium{
+	height: 200px;
 }

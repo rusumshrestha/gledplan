@@ -94,7 +94,9 @@
 			<div class="container-large">
 				<div class="page-banner">
 					<div class="item" style="background-image: url('dist/images/slider/slider-img-4.png');">
-						<p>Veelgestelde <br> vragen</p>
+						<div class="container-medium">
+							<p>Veelgestelde <br> vragen</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -103,7 +105,7 @@
 		<!-- START MAIN CONTENT -->
 		<div class="main-content">
 			<div class="container-medium">
-				<div class="content-sidebar-left">
+				<div class="content-sidebar-left mob-left">
 					<div class="content-left">
 						<div class="full-width-content common-block">
 							<div class="title-block">
@@ -128,7 +130,6 @@
 								<p>Het BKR registreert leningen. Bijna iedereen koopt wel eens iets op krediet of leent geld. Bijvoorbeeld om een wasmachine te kopen of een verbouwing te betalen. Maar ook de mogelijkheid om rood te staan, kan meetellen. Financiers  moeten elke lening aanmelden bij Stichting Bureau Krediet Registratie (BKR), dat is een wettelijke plicht. Financiers gebruiken het BKR-systeem ook als er een nieuwe kredietaanvraag binnenkomt. Door een toetsing te doen, kunnen zij beter inschatten hoe klanten er financieel voor staan. Een toetsing bij Stichting BKR is voor hen een hulpmiddel om verantwoord krediet te kunnen verstrekken. Onder andere op basis van deze informatie besluiten de financiers  of zij de aangevraagde lening toekennen of niet. Stichting BKR beslist zelf niet over het verstrekken van kredieten. </p>
 								<strong>Ik heb een andere vraag</strong>
 								<p>Staat je vraag niet in de lijst met veelgestelde vragen? Bel ons dan op werkdagen van 8.30 -18.00 uur via 020-3125339. Wij helpen je graag verder. Je kunt ons natuurlijk ook mailen: <a href="mailto:info@geldplan.nl" title="info@geldplan.nl">info@geldplan.nl</a>.</p>
-
 							</div>
 						</div>
 					</div>
@@ -271,14 +272,14 @@
 		polyfill : false,
 		onInit : function() {
 		this.output = jQuery( '<div class="range-output" />' ).insertAfter( this.$range).html( this.$element.val() );
-									},
-									onSlide : function( position, value ) {
-									this.output.html( value );
-									}
-									});
-										jQuery(".main-menu").hover(function () {
-										jQuery('body').toggleClass("result_hover");
+										},
+										onSlide : function( position, value ) {
+										this.output.html( value );
+										}
 										});
+											jQuery(".main-menu").hover(function () {
+											jQuery('body').toggleClass("result_hover");
+											});
 			</script>
 		</body>
 	</html>

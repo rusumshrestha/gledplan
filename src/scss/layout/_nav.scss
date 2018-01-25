@@ -222,15 +222,17 @@
 .main-menu{
 	li.has-submenu{
 		a{
-			position: relative;
-			&:after{
-				position: absolute;
-			    font-family: 'icomoon';
-			    content: "\e907";
-			    right: -20px;
-			    top: 13px;
-			    font-size: 10px;
+			@include breakpoint (medium) {
+				position: relative;
+				&:after{
+					position: absolute;
+				    font-family: 'icomoon';
+				    content: "\e907";
+				    right: -20px;
+				    top: 13px;
+				    font-size: 10px;
 
+				}
 			}
 		}
 		li{

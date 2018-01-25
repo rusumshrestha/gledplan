@@ -1,5 +1,6 @@
 .sidebar {
 	margin-top: 60px;
+	margin-bottom:60px;
 	.title-block{
 		h2{
 			font-size: 16px;
@@ -145,6 +146,7 @@
 		@include breakpoint(small) {
 			width: 282px;
 			margin-top: 60px;
+			margin-bottom: 60px;
 		}
 		.intro-form {
 			margin:0;

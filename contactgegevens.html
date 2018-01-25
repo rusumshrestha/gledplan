@@ -94,7 +94,9 @@
 			<div class="container-large">
 				<div class="page-banner">
 					<div class="item" style="background-image: url('dist/images/slider/slider-img-6.png');">
-						<p>Contactgegevens</p>
+						<div class="container-medium">
+							<p>Contactgegevens</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -103,7 +105,7 @@
 		<!-- START MAIN CONTENT -->
 		<div class="main-content">
 			<div class="container-medium">
-				<div class="content-sidebar-left">
+				<div class="content-sidebar-left mob-left">
 					<div class="content-left">
 						<div class="full-width-content common-block">
 							<div class="title-block">
@@ -258,14 +260,14 @@
 		polyfill : false,
 		onInit : function() {
 		this.output = jQuery( '<div class="range-output" />' ).insertAfter( this.$range).html( this.$element.val() );
-									},
-									onSlide : function( position, value ) {
-									this.output.html( value );
-									}
-									});
-										jQuery(".main-menu").hover(function () {
-										jQuery('body').toggleClass("result_hover");
+										},
+										onSlide : function( position, value ) {
+										this.output.html( value );
+										}
 										});
+											jQuery(".main-menu").hover(function () {
+											jQuery('body').toggleClass("result_hover");
+											});
 			</script>
 		</body>
 	</html>
