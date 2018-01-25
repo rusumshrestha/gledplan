@@ -3,12 +3,12 @@ header{
 }
 .logo{
 	float: left;
-	@include breakpoint (small) {
+	@include breakpoint (medium) {
 		padding: 0 0 0 15px;
 	}
 	img{
 		height: 50px;
-		@include breakpoint (small) {
+		@include breakpoint (medium) {
 			height: 100%;
 		}
 	}
@@ -17,28 +17,62 @@ header{
 	}
 }
 .side-nav{
-	float: left;
-    width: 60%;
-    margin-left: 10px;
-	@include breakpoint (small) {
-		float: right;
+	float: right;
+    width: 50%;
+    margin-right: 85px;
+    margin-top: 10px;
+    @include breakpoint(x-small) {
+		width: 60%;
+    	margin-right: 105px;
+	}
+	@include breakpoint (medium) {
 		margin-top: 55px;
-		width: auto;
+		margin-right: 0px;
+		width: 13%;
 		margin-left: 0;
+	}
+	@include breakpoint (large){
+		width: auto;
 	}
 	.info-bar{
 		ul{
+			position: relative;
 			li{
-				float: left;
-				font:$light 14px $text;
+				font:$light 11px $text;
 				color:$grey-dark;
 				text-align: right;
-				margin-left: 10px;
+				display: block;
+				@include breakpoint(x-small) {
+					font-size: 14px;
+				}
+				@include breakpoint(large){
+					float: left;
+					margin-left: 10px;
+					
+				}
+				span{
+					display: none;
+					@include breakpoint (medium) {
+						display: inline-block;
+					}
+				}
 				a{
-					font:$bold 16px $text;
+					font:$bold 12px $text;
+					@include breakpoint(x-small) {
+						font-size: 16px;
+					}
 					i{
+						position: absolute;
+						right:-20px;
+						top:10px;
 						color: $green;
 						@include transition_hover();
+						@include breakpoint(x-small) {
+							right: -30px;
+						}
+						@include breakpoint(medium) {
+							position: static;
+						}
 					}
 					&:hover{
 						i{
