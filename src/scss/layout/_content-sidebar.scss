@@ -10,6 +10,50 @@
 			margin-bottom: 0;
 			float: left;
 		}
+		.four-col{
+			@include breakpoint(medium){
+				display: block;
+			}
+			.col{
+				@include breakpoint(medium){
+					float: left;
+					width: 83px;
+				}
+				@include breakpoint(large){
+					float: left;
+					width: 99px;
+				}
+				p{
+					font-size: 13px;
+					line-height: 20px;
+				}
+				.icon-block{
+					@include breakpoint(small) {
+						width: 122px;
+						height: 122px;
+					}
+					@include breakpoint(medium) {
+						width: 83px;
+						height: 83px;
+					}
+					@include breakpoint(large) {
+						width: 99px;
+						height: 99px;
+					}
+					svg,img{
+						@include breakpoint(small) {
+							margin:27px 0;
+						}
+						@include breakpoint(medium) {
+							margin:18px 0;
+						}
+						@include breakpoint(large) {
+							margin:25px 0;
+						}
+					}
+				}
+			}
+		}
 	}
 	.sidebar{
 		@include breakpoint(small) {
@@ -36,8 +80,3 @@
 		}
 	}
 }
-// .sidebar{
-// 	@include breakpoint(small) {
-// 		width: 282px;
-// 	}
-// }

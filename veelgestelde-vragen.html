@@ -40,7 +40,7 @@
 				<div class="main-menu">
 					<ul id="menu-main-menu" class="menu">
 						<li class="has-submenu">
-							<a href="#" title="Geld lenen">Geld lenen</a>
+							<a href="#" title="Geld lenen">Geld lenen <i class="icon-arrow-down"></i></a>
 							<ul class="sub-menu">
 								<li><a href="#" title="Geld lenen">Geld lenen 1</a></li>
 								<li><a href="#" title="Geld lenen">Geld lenen 2</a></li>
@@ -49,7 +49,7 @@
 							</ul>
 						</li>
 						<li class="has-submenu">
-							<a href="#" title="Waarvoor lenen">Waarvoor lenen</a>
+							<a href="#" title="Waarvoor lenen">Waarvoor lenen <i class="icon-arrow-down"></i></a>
 							<ul class="sub-menu">
 								<li><a href="#" title="Waarvoor lenen">Waarvoor lenen 1</a></li>
 								<li><a href="#" title="Waarvoor lenen">Waarvoor lenen 2</a></li>
@@ -58,7 +58,7 @@
 							</ul>
 						</li>
 						<li class="has-submenu">
-							<a href="#" title="Persoonlijke Lening">Persoonlijke Lening</a>
+							<a href="#" title="Persoonlijke Lening">Persoonlijke Lening <i class="icon-arrow-down"></i></a>
 							<ul class="sub-menu">
 								<li><a href="#" title="Persoonlijke Lening">Persoonlijke Lening</a></li>
 								<li><a href="#" title="Persoonlijke Lening">Persoonlijke Lening</a></li>
@@ -66,7 +66,7 @@
 							</ul>
 						</li>
 						<li class="has-submenu">
-							<a href="#" title="Klantenservice">Klantenservice</a>
+							<a href="#" title="Klantenservice">Klantenservice <i class="icon-arrow-down"></i></a>
 							<ul class="sub-menu">
 								<li><a href="#" title="Klantenservice">Klantenservice</a></li>
 								<li><a href="#" title="Klantenservice">Klantenservice</a></li>
@@ -238,48 +238,6 @@
 		<script type='text/javascript' src='dist/js/owl.carousel.min.js'></script>
 		<script type='text/javascript' src='dist/js/rangeslider.min.js'></script>
 		<script type='text/javascript' src='dist/js/main.js'></script>
-		<script>
-			function reset_menu() {
-				jQuery('.menuu-toggle').removeClass('active');
-				jQuery('.main-menu').css({'display':'none'});
-			}
-			jQuery(document).ready(function($) {
-				$('.menu-toggle').bind('click', function() {
-					$(this).toggleClass('active');
-					$('.main-menu').slideToggle();
-				});
-				// $('input[type="range"]').rangeslider();
-				$('.owl-carousel').owlCarousel({
-				loop:true,
-				margin:0,
-				nav:true,
-				responsive:{
-				0:{
-				items:1
-				},
-				600:{
-				items:1
-				},
-				1000:{
-				items:1
-				}
-				}
-				});
-			});
-		</script>
-		<script>
-		jQuery('input[type="range"]').rangeslider({
-		polyfill : false,
-		onInit : function() {
-		this.output = jQuery( '<div class="range-output" />' ).insertAfter( this.$range).html( this.$element.val() );
-										},
-										onSlide : function( position, value ) {
-										this.output.html( value );
-										}
-										});
-											jQuery(".main-menu").hover(function () {
-											jQuery('body').toggleClass("result_hover");
-											});
-			</script>
+		
 		</body>
 	</html>

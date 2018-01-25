@@ -6,6 +6,13 @@
 	.container-large, .owl-carousel, .owl-stage-outer, .owl-stage, .owl-item, .item{
 		height: 100%;
 	}
+	.owl-item{
+		.item {
+			p{
+				padding-top: 0;
+			}
+		}
+	}
 	.item{
 		background-repeat: no-repeat;
 		background-size: cover;

@@ -112,16 +112,5 @@
 		<script type='text/javascript' src='dist/js/rangeslider.min.js'></script>
 		<script type='text/javascript' src='dist/js/main.js'></script>
 		
-		<script>
-		jQuery('input[type="range"]').rangeslider({
-		polyfill : false,
-		onInit : function() {
-		this.output = jQuery( '<div class="range-output" />' ).insertAfter( this.$range).html( this.$element.val() );
-			},
-			onSlide : function( position, value ) {
-			this.output.html( value );
-			}
-			});
-			</script>
 		</body>
 	</html>

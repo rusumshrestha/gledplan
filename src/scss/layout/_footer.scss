@@ -83,6 +83,9 @@ footer {
 
 			}
 			@include breakpoint(medium) {
+				right: 0;
+			}
+			@include breakpoint(large) {
 				right: -25px;
 			}
 			h2{

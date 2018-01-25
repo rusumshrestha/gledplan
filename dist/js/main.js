@@ -33,5 +33,43 @@ jQuery(function(){
     
     });
 });
-
+function reset_menu() {
+    jQuery('.menuu-toggle').removeClass('active');
+    jQuery('.main-menu').css({'display':'none'});
+}
+jQuery(document).ready(function($) {
+    $('.menu-toggle').bind('click', function() {
+        $(this).toggleClass('active');
+        $('.main-menu').slideToggle();
+    });
+    
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:0,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            1000:{
+                items:1
+            }
+        }
+    });
+});
+jQuery('input[type="range"]').rangeslider({
+    polyfill : false,
+    onInit : function() {
+        this.output = jQuery( '<div class="range-output" />' ).insertAfter( this.$range).html( this.$element.val() );
+    },
+    onSlide : function( position, value ) {
+    this.output.html( value );
+    }
+});
+jQuery(".main-menu").hover(function () {
+    jQuery('body').toggleClass("result_hover");
+});
 

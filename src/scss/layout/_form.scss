@@ -220,7 +220,7 @@ label.css-radio-label {
 	color: $grey-dark;
 	position: relative;
 
-	@include breakpoint(small) {
+	@include breakpoint(medium) {
 		width: 380px;
 	}
 
@@ -244,7 +244,7 @@ label.css-radio-label {
 		@include border(all, 1px, solid, rgba($grey-dark,.5));
 		*background: rgba($grey-light,.5);
 
-		@include breakpoint(small) {
+		@include breakpoint(medium) {
 			width: 380px;
 		}
 
@@ -267,8 +267,12 @@ label.css-radio-label {
 .step-form {
 	.range-output{
 		margin-top:50px;
-		@include breakpoint(small) {
+		width: 100%;
+		margin-left: 0;
+		@include breakpoint(medium) {
 			margin-top: 0;
+			width: 175px;
+    		margin-left: 20px;
 		}
 
 	}
@@ -304,7 +308,13 @@ label.css-radio-label {
 		}
 
 		@include breakpoint(small) {
-			width: 433px;
+			width: 100%;
+		}
+		@include breakpoint(medium) {
+			width: 320px;
+		}
+		@include breakpoint(large) {
+			width: 400px;
 		}
 
 	}
