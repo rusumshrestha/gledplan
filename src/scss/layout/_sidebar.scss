@@ -131,3 +131,25 @@
 		}
 	}
 }
+.content-sidebar-left.mob-left{
+	display: flex;
+	flex-wrap:wrap;
+	.content-left{
+		order:2;
+	}
+	.sidebar{
+		order:1;
+		width: 100%;
+		margin: 0;
+		@include breakpoint(small) {
+			width: 282px;
+			margin-top: 60px;
+		}
+		.intro-form {
+			margin:0;
+		}
+	}
+	@include breakpoint(small) {
+		display: block;
+	}
+}
