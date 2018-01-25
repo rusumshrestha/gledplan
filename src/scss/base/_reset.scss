@@ -269,3 +269,12 @@ a{
 .mb-40{
   margin-bottom: 40px;
 }
+
+.pl-block{
+  @include breakpoint(small){
+    padding-left: 80px;
+  }
+  @include breakpoint(large) {
+    padding-left: 95px;
+  }
+}
