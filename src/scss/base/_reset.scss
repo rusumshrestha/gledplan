@@ -230,6 +230,7 @@ a{
   }
 }
 .result_hover:after{
+  @include breakpoint(medium){
   position: absolute;
   top:0;
   right: 0;
@@ -238,6 +239,7 @@ a{
   background: rgba($primary-color,.3);
   z-index: 9;
   @include transition_hover(.2s);
+  }
 }
 
 

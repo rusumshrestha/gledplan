@@ -5,10 +5,10 @@
 	}
 
 .menu-toggle {
-	width: 35px;
-	height: 30px;
+	width: 60px;
+	height: 60px;
 	cursor: pointer;
-	background-color: #FFF;
+	background-color: $theme-color;
 	position: absolute;
 	right: 20px;
 	top: 0;
@@ -19,6 +19,7 @@
 	-o-transform: translateY(-0%);
 	float: right;
 	display: block;
+	padding: 12px;
 
 	@include breakpoint(medium) {
 		display: none;
@@ -27,7 +28,7 @@
 	>span {
 		width: 35px;
 		height: 6px;
-		background-color: #676767;
+		background-color:$white;
 		margin-bottom: 6px;
 		display: block;
 		transition: all 0.3s ease 0s;
@@ -43,7 +44,7 @@
 	}
 
 	&.active>span {
-		background: #09426A;
+		background: $white;
 
 		&:first-child {
 			transform: rotate(50deg);
@@ -52,7 +53,7 @@
 			-ms-transform: rotate(50deg);
 			-o-transform: rotate(50deg);
 			position: relative;
-			top: 8px;
+			top: 12px;
 		}
 
 		&:nth-child(2) {
@@ -66,7 +67,7 @@
 			-ms-transform: rotate(-50deg);
 			-o-transform: rotate(-50deg);
 			position: relative;
-			top: -16px;
+			top: -13px;
 		}
 
 	}
@@ -82,14 +83,15 @@
 	@include transition_hover(1s);
 	@include breakpointMax(medium) {
 		position: absolute;
-		top: 50px;
+		top: 59px;
 		left: 0;
 		width: 100%;
 		padding: 0 20px;
-		z-index: 2;
+		z-index: 999;
 		display: none;
 		margin:0;
 		background: $white;
+		@include border(bottom,1px,solid,$primary-color);
 	}
 	ul {
 		margin: 0;

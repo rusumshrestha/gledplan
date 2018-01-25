@@ -251,6 +251,13 @@ label.css-radio-label {
 }
 
 .step-form {
+	.range-output{
+		margin-top:50px;
+		@include breakpoint(small) {
+			margin-top: 0;
+		}
+
+	}
 	.rangeslider--horizontal {
 		background: $grey;
 		float: left;
