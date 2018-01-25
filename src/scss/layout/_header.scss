@@ -33,8 +33,18 @@ header{
 				font:$light 14px $text;
 				color:$grey-dark;
 				text-align: right;
+				margin-left: 10px;
 				a{
 					font:$bold 16px $text;
+					i{
+						color: $green;
+						@include transition_hover();
+					}
+					&:hover{
+						i{
+							color:$theme-color;
+						}
+					}
 				}
 			}
 		}

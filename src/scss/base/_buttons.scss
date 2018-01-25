@@ -29,4 +29,20 @@
 		padding: 14px 25px;
 		@include border(all,3px,solid,$theme-color);
 	}
+	&:disabled{
+		background: $grey;
+		color: rgba($grey-dark,.4);
+		cursor: not-allowed;
+		i{
+			color: rgba($grey-dark,.4);	
+		}
+		&:hover{
+			background: $grey;
+		color: rgba($grey-dark,.4);
+		cursor: not-allowed;
+		i{
+			color: rgba($grey-dark,.4);	
+		}
+		}
+	}
 }

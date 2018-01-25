@@ -14,7 +14,7 @@
 			width: 200px;
 			height: 200px;
 		}
-		svg{
+		svg,img{
 			margin: 35px 0;
 			height: 70px;
 			@include  breakpoint(medium) {
@@ -52,18 +52,34 @@
 }
 
 .content-sidebar-left, .content-sidebar-right{
+	.icon-block-content{
+		.icon-block{
+			svg,img{
+				margin: 35px 0;
+				height: 70px;
+				@include  breakpoint(medium) {
+					// height: 70px;
+					margin: 40px 0;
+				}
+			}
+		}
+
+	}
 	.four-col {
+
 		@include breakpoint(small) {
 			margin-top: -60px;
 			flex-wrap:wrap;
+			margin-left: -60px;
 		}
 		@include breakpoint(medium) {
 			margin-top: -60px;
 			flex-wrap:nowrap;
+			margin-left: -60px;
 		}
 		.col{
 			@include breakpoint(small) {
-				width: calc(50% - 30px);
+				width: calc(50% - 60px);
 				margin-top:60px;
 			}
 		}
@@ -71,18 +87,20 @@
 	.icon-block-content {
 		.icon-block{
 			@include breakpoint(medium) {
-				width: 150px;
-				height: 150px;
+				width: 90px;
+				height: 90px;
 			}
 			span{
 				@include breakpoint(medium) {
-					font-size: 80px;
+					font-size: 50px;
+					left: 0;
+					top:-30px;
 				}
 			}
-			svg{
+			svg,img{
 				@include breakpoint(medium) {
-					height: 60px;
-					margin:44px 0;
+					height: 45px;
+					margin:25px 0;
 				}
 			}
 		}

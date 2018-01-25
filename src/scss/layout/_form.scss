@@ -2,7 +2,10 @@ input[type="text"],
 input[type="password"],
 input[type="number"],
 input[type="email"],
-textarea {
+textarea, select {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+
 	&:focus {
 		box-shadow: none;
 		-webkit-box-shadow: none;
@@ -11,8 +14,18 @@ textarea {
 	}
 
 }
+input[type="button"].btn, input[type="reset"].btn, input[type="submit"].btn, button.btn{
+	font-weight: $regular;
+	padding:17px 27px;
+}
 
+input[type="number"] {
+    -moz-appearance: textfield;
+}
 .global-form {
+	label{
+		line-height: 1;
+	}
 	ul {
 		li {
 			margin-bottom: 40px;
@@ -52,13 +65,14 @@ textarea {
 	textarea,
 	.range-output {
 		@include border-radius(4px);
-		@include border(all, 1px, solid, $grey-dark);
+		@include border(all, 1px, solid, rgba($grey-dark,.5));
+		background: rgba($grey-light,.5);
 		@include transition_hover(.1s);
 		padding: 11px 15px;
 		width: 100%;
 		font: $regular 20px $text;
 		color: $grey-dark;
-		background: #F6F6F6;
+		
 
 		@include breakpoint(small) {
 			width: 389px;
@@ -74,7 +88,7 @@ textarea {
 		float: left;
 		padding: 10px 10px 10px 30px;
 		width: 100%;
-		margin-top: 50px;
+		margin-top: 30px;
 
 		@include breakpoint(small) {
 			width: 175px;
@@ -113,8 +127,8 @@ input[type=checkbox].css-checkbox {
 
 		&:after {
 			@include border-radius(4px);
-			background: $white;
-			@include border(all, 1px, solid, $grey-dark);
+			background: rgba($grey-light,.5);
+			@include border(all, 1px, solid, rgba($grey-dark,.5));
 			width: 30px;
 			height: 30px;
 			position: absolute;
@@ -171,8 +185,8 @@ input[type=radio].css-radio {
 		font-size: 20px;
 		line-height: 1;
 		@include border-radius(4px);
-		background: #F6F6F6;
-		@include border(all, 1px, solid, $grey-dark);
+		@include border(all, 1px, solid, rgba($grey-dark,.5));
+		background: rgba($grey-light,.5);
 		@include transition_hover(.1s);
 		color: $grey-dark;
 	}
@@ -202,7 +216,7 @@ label.css-radio-label {
 .custom-select {
 	overflow: hidden;
 	width: 100%;
-	background: #F6F6F6;
+	background: rgba($grey-light,.5);
 	color: $grey-dark;
 	position: relative;
 
@@ -216,7 +230,7 @@ label.css-radio-label {
 		position: absolute;
 		color: $grey-dark;
 		right: 15px;
-		top: 9px;
+		top: 12px;
 	}
 
 	select {
@@ -225,10 +239,10 @@ label.css-radio-label {
 		font-size: 16px;
 		padding: 15px;
 		width: 100%;
-		*background: #F6F6F6;
 		-webkit-appearance: none;
 		@include border-radius(4px);
-		@include border(all, 1px, solid, $grey-dark);
+		@include border(all, 1px, solid, rgba($grey-dark,.5));
+		*background: rgba($grey-light,.5);
 
 		@include breakpoint(small) {
 			width: 380px;
@@ -257,6 +271,14 @@ label.css-radio-label {
 			margin-top: 0;
 		}
 
+	}
+	.rangeslider__handle{
+		width: 30px;
+		height: 30px;
+		border-width: 5px;
+	}
+	.rangeslider--horizontal .rangeslider__handle{
+		top:-13px;
 	}
 	.rangeslider--horizontal {
 		background: $grey;
@@ -333,6 +355,7 @@ label.css-radio-label {
 	textarea {
 		background: rgba($green,.2);
 		border-color:$green;
+		color: $green;
 	}
 	i {
 		color: $green;
@@ -356,6 +379,7 @@ label.css-radio-label {
 	textarea {
 		background: rgba($red,.2);
 		border-color:$red;
+		color: $red;
 	}
 	i,label {
 		color: $red;
@@ -380,6 +404,7 @@ label.css-radio-label {
 	textarea {
 		background: rgba($theme-color,.2);
 		border-color:$theme-color;
+		color: $theme-color;
 	}
 	i {
 		color: $theme-color;
@@ -413,10 +438,10 @@ label.css-radio-label {
 
 			}
 			input[type="text"],
-	input[type="password"],
-	input[type="number"],
-	input[type="email"],
-	textarea {
+			input[type="password"],
+			input[type="number"],
+			input[type="email"],
+			textarea {
 				width: 100%;
 			}
 		}

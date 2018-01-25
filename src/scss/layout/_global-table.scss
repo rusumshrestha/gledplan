@@ -9,8 +9,8 @@
 	}
 
 	.global-table {
-		@include border(all, 1px, solid, $grey-dark);
-		@include border(bottom, 3px, solid, $grey-dark);
+		@include border(all, 1px, solid, rgba($grey-dark,.7));
+		@include border(bottom, 3px, solid, rgba($grey-dark,.7));
 
 		.title-block {
 			padding: 30px 20px 0;
@@ -46,4 +46,21 @@
 
 	}
 
+}
+
+.global-form .global-table a{
+	font-weight: $regular;
+	color:$grey-dark;
+	margin:40px auto;
+	width: 192px;
+	display: block;
+	i{
+		color:$grey-dark;
+		@include transition_hover();
+	}
+	&:hover{
+		i{
+			color: $white;
+		}
+	}
 }

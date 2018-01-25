@@ -15,11 +15,24 @@
 	}
 	.four-col{
 		margin-bottom: 60px;
+		@include breakpoint(small) {
+			margin-left: -30px;
+		}
+		.col{
+			@include breakpoint(small){
+				margin-left: 30px;
+				width: calc(25% - 30px);
+			}
+		}
 		a{
 			display: block;
 			color:$magenta;
 			font-weight: $semi;
 			font-size: 20px;
+			i{
+				font-size: 16px;
+				margin:0 0 0 10px;
+			}
 			&:hover{
 				color:$theme-color;
 			}

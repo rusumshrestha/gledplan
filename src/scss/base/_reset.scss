@@ -19,6 +19,18 @@ html {
   margin:0;
   padding: 0;
 }
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba($grey-dark,.5);
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: rgba($grey-dark,.5);
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: rgba($grey-dark,.5);
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: rgba($grey-dark,.5);
+}
 
 // adaptive images
 img {

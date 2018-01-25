@@ -104,11 +104,14 @@
    /* 
    FOUR COL
    ========================================================================== */
-   .four-col{	
+   .four-col{
+      @include breakpoint(small) {	
+         margin-left: -60px;
+      }
    		.col{
    			@include breakpoint(small) {
-				width: calc(25% - 30px);
-				margin-left: 30px;
+				width: calc(25% - 60px);
+				margin-left: 60px;
    			}
    		}
    }
