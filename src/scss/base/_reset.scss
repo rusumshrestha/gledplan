@@ -272,9 +272,6 @@ a{
 
 .pl-block{
   @include breakpoint(small){
-    padding-left: 80px;
-  }
-  @include breakpoint(large) {
     padding-left: 95px;
   }
 }

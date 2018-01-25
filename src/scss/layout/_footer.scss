@@ -30,7 +30,9 @@ footer {
 
 	.footer-bottom {
 		position: relative;
-		padding-top: 30px;
+		@include breakpoint(small){
+			padding-top: 30px;	
+		}
 		.foot-quick-menu {
 			text-align: center;
 
