@@ -52,21 +52,21 @@
 	&:last-child{
 		margin-bottom: 0;
 	}
-	@include breakpoint(x-small) {
+	@include breakpoint(medium) {
 		margin-bottom: 0;
 	}
 }
 .progress-tracker--word-center{
 	padding: 0;
 	display: block;
-	@include breakpoint(x-small) {
+	@include breakpoint(medium) {
 		padding: 0 56px;
 		display: flex;
 	}
 }
 .progress-bar .progress-step.is-complete::after, .progress-bar .progress-step::after{
 	display: none;
-	@include breakpoint(x-small) {
+	@include breakpoint(medium) {
 		display: block;
 	}
 }
@@ -75,7 +75,7 @@
 	float: left;
 	line-height: 56px;
 	text-align: center;
-	@include breakpoint(x-small) {
+	@include breakpoint(medium) {
 		display: flex;
 		float: none;
 	}
@@ -85,7 +85,7 @@
 	-webkit-transform:none;
 	-moz-transform:none;
 	margin-left: 15px;
-	@include breakpoint(x-small) {
+	@include breakpoint(medium) {
 		transform:translateX(calc(-50% + 14px));
 		-webkit-transform:translateX(calc(-50% + 14px));
 		-moz-transform:translateX(calc(-50% + 14px));

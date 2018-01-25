@@ -29,6 +29,7 @@ input[type="number"] {
 	ul {
 		li {
 			margin-bottom: 40px;
+			position: relative;
 
 			p {
 				position: relative;
@@ -74,7 +75,7 @@ input[type="number"] {
 		color: $grey-dark;
 		
 
-		@include breakpoint(small) {
+		@include breakpoint(medium) {
 			width: 389px;
 		}
 
@@ -216,22 +217,25 @@ label.css-radio-label {
 .custom-select {
 	overflow: hidden;
 	width: 100%;
-	background: rgba($grey-light,.5);
+	background:  rgba($grey-light,.5) url("../images/down-arrow.svg") no-repeat 98% center;
 	color: $grey-dark;
 	position: relative;
+	@include breakpoint(small) {
+		background-position: 95% center;
+	}
 
 	@include breakpoint(medium) {
 		width: 380px;
 	}
 
-	&:after {
-		content: "\e907";
-		font-family: "icomoon";
-		position: absolute;
-		color: $grey-dark;
-		right: 15px;
-		top: 12px;
-	}
+	// &:after {
+	// 	content: "\e907";
+	// 	font-family: "icomoon";
+	// 	position: absolute;
+	// 	color: $grey-dark;
+	// 	right: 15px;
+	// 	top: 12px;
+	// }
 
 	select {
 		color: $grey-dark;
@@ -486,4 +490,33 @@ label.css-radio-label {
 			}
 		}
 	}
+}
+.global-form ul li .label-block{
+	label{
+		display: inline-block;
+	}
+}
+.global-form ul li .label-block,.global-form ul li.checkbox-info{
+	.tooltip{
+		display: inline-block;
+		a{
+			color:$primary-color;
+			font-size: 20px;
+			line-height: 1;
+			&:hover{
+				color:$theme-color;
+			}
+		}
+
+	}
+}
+.checkbox-info{
+	position: relative;
+	.tooltip{
+		position: absolute;
+		top:1px;
+		margin-left: 5px;
+		right: 0;
+	}
+
 }
