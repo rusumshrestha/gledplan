@@ -7,6 +7,8 @@
 		<title>Gled Plan :: Startpagina Huis & Hypotheek</title>
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
 		<link rel="stylesheet" href="dist/css/rangeslider.css">
+		<link rel="stylesheet" href="dist/css/jquery-ui.min.css">
+		<link rel="stylesheet" href="dist/css/jquery.fancybox.css">
 		<link rel="stylesheet" href="dist/css/style.css">
 		
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -183,7 +185,7 @@
 										<p><input type="text" id="tussenvoegsel" placeholder="Tussenvoegsel"></p>
 									</li>
 									<li>
-										<label for="achternaam">Achternaam (zoals vermeld in paspoort) <i class="icon-info"></i></label>
+										<label for="achternaam">Achternaam (zoals vermeld in paspoort) <a href="#info-1" class="fancybox"><i class="icon-info"></label></i></a>
 										<p><input type="text" id="achternaam" placeholder="Achternaam"></p>
 									</li>
 									<li>
@@ -194,10 +196,10 @@
 										<label for="telefoonnummer">Telefoonnummer</label>
 										<p><input type="text" id="telefoonnummer" placeholder="Telefoonnummer"></p>
 									</li>
-									<li class="error-bg">
+									<li class="error-bg date-block">
 										<label for="geboortedatum">Geboortedatum niet juist ingevuld</label>
 										<p>
-											<input type="text" id="geboortedatum" placeholder="19-12-197">
+											<input type="text" id="datepicker" placeholder="19-12-197">
 											<span class="notification"><i class="icon-cal"></i></span>
 										</p>
 									</li>
@@ -449,10 +451,20 @@
 			</div>
 		</footer>
 		<!-- END FOOTER -->
+
+		<div id="info-1" class="fancybox-info">
+			<div class="fancy-content">
+			<p>Vul hier de achternaam in die op je paspoort of identiteitskaart staat vermeld. Indien gehuwd, vermeld hier alleen je meisjesnaam.
+				</p>
+			</div>
+		</div>
 		<script type='text/javascript' src='dist/js/jquery.js'></script>
 		<script type='text/javascript' src='dist/js/nav.js'></script>
 		<script type='text/javascript' src='dist/js/owl.carousel.min.js'></script>
 		<script type='text/javascript' src='dist/js/rangeslider.min.js'></script>
+		<script type='text/javascript' src='dist/js/jquery-ui.min.js'></script>
+		<script type='text/javascript' src='dist/js/jquery.fancybox.js'></script>
+
 		<script type='text/javascript' src='dist/js/main.js'></script>
 		</body>
 	</html>

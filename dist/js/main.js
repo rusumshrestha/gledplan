@@ -59,17 +59,45 @@ jQuery(document).ready(function($) {
             }
         }
     });
-});
-jQuery('input[type="range"]').rangeslider({
-    polyfill : false,
-    onInit : function() {
-        this.output = jQuery( '<div class="range-output" />' ).insertAfter( this.$range).html( this.$element.val() );
-    },
-    onSlide : function( position, value ) {
-    this.output.html( value );
-    }
+    jQuery('.fancybox').fancybox();
 });
 jQuery(".main-menu").hover(function () {
     jQuery('body').toggleClass("result_hover");
 });
 
+jQuery( function() {
+    jQuery( "#datepicker" ).datepicker();
+  } );
+
+
+
+var $rangeslider = jQuery('#js-amount-range');
+var $amount = jQuery('#js-amount-input');
+
+$rangeslider
+  .rangeslider({
+    polyfill: false
+  })
+  .on('input', function() {
+    $amount[0].value = this.value;
+  });
+
+$amount.on('input', function() {
+  $rangeslider.val(this.value).change();
+});
+
+
+var $rangeslider1 = jQuery('#js-amount-range1');
+var $amount1 = jQuery('#js-amount-input1');
+
+$rangeslider1
+  .rangeslider({
+    polyfill: false
+  })
+  .on('input', function() {
+    $amount1[0].value = this.value;
+  });
+
+$amount1.on('input', function() {
+  $rangeslider1.val(this.value).change();
+});

@@ -82,6 +82,13 @@ input[type="number"] {
 		&:focus {
 			border-color: $primary-color;
 		}
+		input{
+			border:none;
+			background: none;
+			width: auto;
+			padding: 0;
+			width: 100%;
+		}
 
 	}
 
@@ -366,7 +373,11 @@ label.css-radio-label {
 	input[type="password"],
 	input[type="number"],
 	input[type="email"],
-	textarea {
+	input[type="tel"],
+	textarea,
+	select,
+	input[type="radio"].css-radio+label.css-radio-label
+	 {
 		background: rgba($green,.2);
 		border-color:$green;
 		color: $green;
@@ -375,6 +386,15 @@ label.css-radio-label {
 		color: $green;
 	}
 
+}
+.success-bg{
+	input[type="checkbox"].css-checkbox+label.css-checkbox-label{
+		color: $green;
+		&:after{
+			border-color:$green;
+		}
+
+	}
 }
 .global-form ul li.success-bg label{
 	color: $green;
@@ -390,7 +410,10 @@ label.css-radio-label {
 	input[type="password"],
 	input[type="number"],
 	input[type="email"],
-	textarea {
+	input[type="tel"],
+	textarea,
+	select,
+	input[type="radio"].css-radio+label.css-radio-label {
 		background: rgba($red,.2);
 		border-color:$red;
 		color: $red;
@@ -399,6 +422,15 @@ label.css-radio-label {
 		color: $red;
 	}
 
+}
+.error-bg{
+	input[type="checkbox"].css-checkbox+label.css-checkbox-label{
+		color: $red;
+		&:after{
+			border-color:$red;
+		}
+
+	}
 }
 
 .global-form ul li.error-bg label{
@@ -415,7 +447,10 @@ label.css-radio-label {
 	input[type="password"],
 	input[type="number"],
 	input[type="email"],
-	textarea {
+	input[type="tel"],
+	textarea,
+	select,
+	input[type="radio"].css-radio+label.css-radio-label{
 		background: rgba($theme-color,.2);
 		border-color:$theme-color;
 		color: $theme-color;
@@ -424,6 +459,15 @@ label.css-radio-label {
 		color: $theme-color;
 	}
 
+}
+.warning-bg{
+	input[type="checkbox"].css-checkbox+label.css-checkbox-label{
+		color: $theme-color;
+		&:after{
+			border-color:$theme-color;
+		}
+
+	}
 }
 
 .global-form ul li.warning-bg label{
@@ -519,4 +563,15 @@ label.css-radio-label {
 		right: 0;
 	}
 
+}
+
+.global-form ul li.date-block{
+	p{
+		@include breakpoint(small){
+			max-width: 180px;
+			input{
+				width: 100%;
+			}
+		}
+	}
 }

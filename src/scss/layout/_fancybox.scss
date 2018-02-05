@@ -1,0 +1,13 @@
+.fancybox-info{
+	display: none;
+	max-width: 600px;
+	padding: 15px;
+}
+
+.fancybox-opened .fancybox-skin{
+	box-shadow: none;
+	@include border-radius(0);
+}
+.fancybox-close{
+	display: none;
+}

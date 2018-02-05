@@ -118,7 +118,10 @@
 					<form action="#">
 						<ul>
 							<li class="slider-wrapper">
-								<input type="range" min="5000" max="75000" step="1" value="15000" data-rangeslider style="width: 100%;">
+								<input type="range" id="js-amount-range"  min="5000" max="75000" value="15000">
+											<div class="range-output">
+												<input type="number" id="js-amount-input" value="15000" min="5000" max="75000" >
+											</div>
 							</li>
 							<li>
 								<button class="btn btn-blue" type="submit">
